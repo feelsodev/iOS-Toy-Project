@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Dice
+//  Amadu_first
 //
-//  Created by once on 06/03/2020.
+//  Created by once on 10/03/2020.
 //  Copyright © 2020 once. All rights reserved.
 //
 
@@ -19,9 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 //        guard let _ = (scene as? UIWindowScene) else { return }
         
-        if let windowScene = scene as? UIWindowScene{
+        if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = FriendsViewController()
+            window.rootViewController = FirstViewController()
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -53,9 +53,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-
-        // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 

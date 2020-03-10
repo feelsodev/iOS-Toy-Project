@@ -7,31 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5AEA4A82412670400A0B059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AEA4A72412670400A0B059 /* AppDelegate.swift */; };
-		A5AEA4AA2412670400A0B059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AEA4A92412670400A0B059 /* SceneDelegate.swift */; };
-		A5AEA4AC2412670400A0B059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AEA4AB2412670400A0B059 /* ViewController.swift */; };
-		A5AEA4AF2412670400A0B059 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AEA4AD2412670400A0B059 /* Main.storyboard */; };
-		A5AEA4B22412670400A0B059 /* Dice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5AEA4B02412670400A0B059 /* Dice.xcdatamodeld */; };
-		A5AEA4B42412670400A0B059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AEA4B32412670400A0B059 /* Assets.xcassets */; };
-		A5AEA4B72412670400A0B059 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AEA4B52412670400A0B059 /* LaunchScreen.storyboard */; };
-		A5F9FD002416BBD600BA570D /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9FCFF2416BBD600BA570D /* FriendsViewController.swift */; };
+		A59A5F0E2417DFC30018C3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */; };
+		A59A5F102417DFC30018C3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */; };
+		A59A5F122417DFC30018C3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F112417DFC30018C3CF /* ViewController.swift */; };
+		A59A5F152417DFC30018C3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59A5F132417DFC30018C3CF /* Main.storyboard */; };
+		A59A5F172417DFC30018C3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59A5F162417DFC30018C3CF /* Assets.xcassets */; };
+		A59A5F1A2417DFC30018C3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59A5F182417DFC30018C3CF /* LaunchScreen.storyboard */; };
+		A59A5F222417F5290018C3CF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F212417F5290018C3CF /* FirstViewController.swift */; };
+		A59A5F242417F5590018C3CF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F232417F5590018C3CF /* SecondViewController.swift */; };
+		A59A5F262417F86D0018C3CF /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F252417F86D0018C3CF /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A5AEA4A42412670400A0B059 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5AEA4A72412670400A0B059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5AEA4A92412670400A0B059 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5AEA4AB2412670400A0B059 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5AEA4AE2412670400A0B059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A5AEA4B12412670400A0B059 /* Dice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dice.xcdatamodel; sourceTree = "<group>"; };
-		A5AEA4B32412670400A0B059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A5AEA4B62412670400A0B059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A5AEA4B82412670400A0B059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5F9FCFF2416BBD600BA570D /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		A59A5F0A2417DFC30018C3CF /* Amadu_first.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amadu_first.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A59A5F112417DFC30018C3CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A59A5F142417DFC30018C3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A59A5F162417DFC30018C3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A59A5F192417DFC30018C3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A59A5F1B2417DFC30018C3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A59A5F212417F5290018C3CF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A59A5F232417F5590018C3CF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A59A5F252417F86D0018C3CF /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A5AEA4A12412670400A0B059 /* Frameworks */ = {
+		A59A5F072417DFC30018C3CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +43,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5AEA49B2412670400A0B059 = {
+		A59A5F012417DFC30018C3CF = {
 			isa = PBXGroup;
 			children = (
-				A5AEA4A62412670400A0B059 /* Dice */,
-				A5AEA4A52412670400A0B059 /* Products */,
+				A59A5F0C2417DFC30018C3CF /* Amadu_first */,
+				A59A5F0B2417DFC30018C3CF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A5AEA4A52412670400A0B059 /* Products */ = {
+		A59A5F0B2417DFC30018C3CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5AEA4A42412670400A0B059 /* Dice.app */,
+				A59A5F0A2417DFC30018C3CF /* Amadu_first.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5AEA4A62412670400A0B059 /* Dice */ = {
+		A59A5F0C2417DFC30018C3CF /* Amadu_first */ = {
 			isa = PBXGroup;
 			children = (
-				A5AEA4A72412670400A0B059 /* AppDelegate.swift */,
-				A5AEA4A92412670400A0B059 /* SceneDelegate.swift */,
-				A5AEA4AB2412670400A0B059 /* ViewController.swift */,
-				A5F9FCFF2416BBD600BA570D /* FriendsViewController.swift */,
-				A5AEA4AD2412670400A0B059 /* Main.storyboard */,
-				A5AEA4B32412670400A0B059 /* Assets.xcassets */,
-				A5AEA4B52412670400A0B059 /* LaunchScreen.storyboard */,
-				A5AEA4B82412670400A0B059 /* Info.plist */,
-				A5AEA4B02412670400A0B059 /* Dice.xcdatamodeld */,
+				A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */,
+				A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */,
+				A59A5F112417DFC30018C3CF /* ViewController.swift */,
+				A59A5F212417F5290018C3CF /* FirstViewController.swift */,
+				A59A5F232417F5590018C3CF /* SecondViewController.swift */,
+				A59A5F252417F86D0018C3CF /* ThirdViewController.swift */,
+				A59A5F132417DFC30018C3CF /* Main.storyboard */,
+				A59A5F162417DFC30018C3CF /* Assets.xcassets */,
+				A59A5F182417DFC30018C3CF /* LaunchScreen.storyboard */,
+				A59A5F1B2417DFC30018C3CF /* Info.plist */,
 			);
-			path = Dice;
+			path = Amadu_first;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5AEA4A32412670400A0B059 /* Dice */ = {
+		A59A5F092417DFC30018C3CF /* Amadu_first */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5AEA4BB2412670400A0B059 /* Build configuration list for PBXNativeTarget "Dice" */;
+			buildConfigurationList = A59A5F1E2417DFC30018C3CF /* Build configuration list for PBXNativeTarget "Amadu_first" */;
 			buildPhases = (
-				A5AEA4A02412670400A0B059 /* Sources */,
-				A5AEA4A12412670400A0B059 /* Frameworks */,
-				A5AEA4A22412670400A0B059 /* Resources */,
+				A59A5F062417DFC30018C3CF /* Sources */,
+				A59A5F072417DFC30018C3CF /* Frameworks */,
+				A59A5F082417DFC30018C3CF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Dice;
-			productName = Dice;
-			productReference = A5AEA4A42412670400A0B059 /* Dice.app */;
+			name = Amadu_first;
+			productName = Amadu_first;
+			productReference = A59A5F0A2417DFC30018C3CF /* Amadu_first.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A5AEA49C2412670400A0B059 /* Project object */ = {
+		A59A5F022417DFC30018C3CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = once;
 				TargetAttributes = {
-					A5AEA4A32412670400A0B059 = {
+					A59A5F092417DFC30018C3CF = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = A5AEA49F2412670400A0B059 /* Build configuration list for PBXProject "Dice" */;
+			buildConfigurationList = A59A5F052417DFC30018C3CF /* Build configuration list for PBXProject "Amadu_first" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +119,58 @@
 				en,
 				Base,
 			);
-			mainGroup = A5AEA49B2412670400A0B059;
-			productRefGroup = A5AEA4A52412670400A0B059 /* Products */;
+			mainGroup = A59A5F012417DFC30018C3CF;
+			productRefGroup = A59A5F0B2417DFC30018C3CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5AEA4A32412670400A0B059 /* Dice */,
+				A59A5F092417DFC30018C3CF /* Amadu_first */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A5AEA4A22412670400A0B059 /* Resources */ = {
+		A59A5F082417DFC30018C3CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5AEA4B72412670400A0B059 /* LaunchScreen.storyboard in Resources */,
-				A5AEA4B42412670400A0B059 /* Assets.xcassets in Resources */,
-				A5AEA4AF2412670400A0B059 /* Main.storyboard in Resources */,
+				A59A5F1A2417DFC30018C3CF /* LaunchScreen.storyboard in Resources */,
+				A59A5F172417DFC30018C3CF /* Assets.xcassets in Resources */,
+				A59A5F152417DFC30018C3CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A5AEA4A02412670400A0B059 /* Sources */ = {
+		A59A5F062417DFC30018C3CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5AEA4AC2412670400A0B059 /* ViewController.swift in Sources */,
-				A5F9FD002416BBD600BA570D /* FriendsViewController.swift in Sources */,
-				A5AEA4A82412670400A0B059 /* AppDelegate.swift in Sources */,
-				A5AEA4B22412670400A0B059 /* Dice.xcdatamodeld in Sources */,
-				A5AEA4AA2412670400A0B059 /* SceneDelegate.swift in Sources */,
+				A59A5F122417DFC30018C3CF /* ViewController.swift in Sources */,
+				A59A5F0E2417DFC30018C3CF /* AppDelegate.swift in Sources */,
+				A59A5F102417DFC30018C3CF /* SceneDelegate.swift in Sources */,
+				A59A5F242417F5590018C3CF /* SecondViewController.swift in Sources */,
+				A59A5F262417F86D0018C3CF /* ThirdViewController.swift in Sources */,
+				A59A5F222417F5290018C3CF /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A5AEA4AD2412670400A0B059 /* Main.storyboard */ = {
+		A59A5F132417DFC30018C3CF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A5AEA4AE2412670400A0B059 /* Base */,
+				A59A5F142417DFC30018C3CF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A5AEA4B52412670400A0B059 /* LaunchScreen.storyboard */ = {
+		A59A5F182417DFC30018C3CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A5AEA4B62412670400A0B059 /* Base */,
+				A59A5F192417DFC30018C3CF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +178,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A5AEA4B92412670400A0B059 /* Debug */ = {
+		A59A5F1C2417DFC30018C3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +238,7 @@
 			};
 			name = Debug;
 		};
-		A5AEA4BA2412670400A0B059 /* Release */ = {
+		A59A5F1D2417DFC30018C3CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,36 +292,36 @@
 			};
 			name = Release;
 		};
-		A5AEA4BC2412670400A0B059 /* Debug */ = {
+		A59A5F1F2417DFC30018C3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TG4L9MF5FD;
-				INFOPLIST_FILE = Dice/Info.plist;
+				INFOPLIST_FILE = Amadu_first/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onceagain.Dice;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onceagain.Amadu-first";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		A5AEA4BD2412670400A0B059 /* Release */ = {
+		A59A5F202417DFC30018C3CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TG4L9MF5FD;
-				INFOPLIST_FILE = Dice/Info.plist;
+				INFOPLIST_FILE = Amadu_first/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.onceagain.Dice;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.onceagain.Amadu-first";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,38 +331,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5AEA49F2412670400A0B059 /* Build configuration list for PBXProject "Dice" */ = {
+		A59A5F052417DFC30018C3CF /* Build configuration list for PBXProject "Amadu_first" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5AEA4B92412670400A0B059 /* Debug */,
-				A5AEA4BA2412670400A0B059 /* Release */,
+				A59A5F1C2417DFC30018C3CF /* Debug */,
+				A59A5F1D2417DFC30018C3CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5AEA4BB2412670400A0B059 /* Build configuration list for PBXNativeTarget "Dice" */ = {
+		A59A5F1E2417DFC30018C3CF /* Build configuration list for PBXNativeTarget "Amadu_first" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5AEA4BC2412670400A0B059 /* Debug */,
-				A5AEA4BD2412670400A0B059 /* Release */,
+				A59A5F1F2417DFC30018C3CF /* Debug */,
+				A59A5F202417DFC30018C3CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A5AEA4B02412670400A0B059 /* Dice.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A5AEA4B12412670400A0B059 /* Dice.xcdatamodel */,
-			);
-			currentVersion = A5AEA4B12412670400A0B059 /* Dice.xcdatamodel */;
-			path = Dice.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = A5AEA49C2412670400A0B059 /* Project object */;
+	rootObject = A59A5F022417DFC30018C3CF /* Project object */;
 }
