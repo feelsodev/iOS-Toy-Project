@@ -8,25 +8,11 @@
 
 import UIKit
 
-class FirstViewController: UITabBarController {
+class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nav = generateNavController(vc: ViewController(), title: "jaein")
-        let nav2 = generateNavController(vc: SecondViewController(), title: "sangwon")
-        let nav3 = generateNavController(vc: ThirdViewController(), title: "jongchan")
-        UINavigationBar.appearance()
-        
-        viewControllers = [nav, nav2, nav3]
-        // Do any additional setup after loading the view.
-        
     }
     
-    func generateNavController(vc : UIViewController, title: String) -> UINavigationController{
-        let navController = UINavigationController(rootViewController: vc)
-        navController.title = title
-        return navController
-    }
-
 }

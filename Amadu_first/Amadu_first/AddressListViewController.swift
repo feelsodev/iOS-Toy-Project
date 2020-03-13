@@ -1,19 +1,18 @@
 //
-//  SecondViewController.swift
+//  AddressListViewController.swift
 //  Amadu_first
 //
-//  Created by once on 11/03/2020.
+//  Created by once on 12/03/2020.
 //  Copyright © 2020 once. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class AddressListViewController: UIViewController {
 
-    //MARK: 버튼 생성
     let button : UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("HI JAEIN", for: .normal)
+        button.setTitle("BACK", for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
@@ -23,16 +22,13 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white   //배경 화이트
-        view.addSubview(button)         //버튼 추가
-        setupButtonLayout()             //오토레이아웃
+        view.backgroundColor = .darkGray
+        view.addSubview(button)
+        setupButtonLayout()
         
-        //버튼 액션 -> AddressListView로 이동
-        button.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
+        button.addTarget(self, action: #selector(backBtn), for: .touchUpInside)
     }
-    
-    
-    //MARK: 오토레이아웃 설정
+
     func setupButtonLayout(){
         button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
@@ -40,13 +36,8 @@ class SecondViewController: UIViewController {
         button.heightAnchor.constraint(equalToConstant: 50 ).isActive = true
     }
     
-    
-    
-    //MARK: 버튼 클릭 이벤트
-    @objc func clickBtn(){
+    @objc func backBtn(){
         print("click!!")
-        let addVC = AddressListViewController()
-        navigationController?.pushViewController(addVC, animated: true)
-//        self.present(AddressListViewController(), animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

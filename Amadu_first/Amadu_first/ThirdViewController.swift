@@ -10,22 +10,19 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+//    let button: UIButton = {
+//        let tempButton = UIButton(type: .system)
+//        tempButton.setTitle("TEMP", for: .normal)
+//        tempButton.setTitleColor(.red, for: .normal)
+//        tempButton.translatesAutoresizingMaskIntoConstraints = false
+//        return tempButton
+//    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .white
-        // Do any additional setup after loading the view.
+//        self.view.addSubview(button)
+//        button.frame = CGRect(x: 100 , y: 220, width: 200, height: 200)
+//        button.backgroundColor = .blue
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
