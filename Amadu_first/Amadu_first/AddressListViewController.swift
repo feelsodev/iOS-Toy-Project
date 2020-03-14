@@ -53,7 +53,5 @@ class AddressListViewController: UIViewController {
     @objc func backBtn(){
         print("click!!")
         dismiss(animated: true, completion: nil)
-        hidesBottomBarWhenPushed = true
-
     }
 }
