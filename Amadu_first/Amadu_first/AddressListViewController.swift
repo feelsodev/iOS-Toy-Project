@@ -16,28 +16,44 @@ class AddressListViewController: UIViewController {
         button.setTitleColor(.red, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        button.frame.size = CGSize(width: 20, height: 20)
+        button.backgroundColor = .red
         return button
+    }()
+    
+    let label : UILabel = {
+        let label = UILabel()
+        label.text = "second view"
+        label.textAlignment = .center
+        label.textColor = .red
+        label.font = .boldSystemFont(ofSize: 17)
+        return label
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .darkGray
-        view.addSubview(button)
-        setupButtonLayout()
-        
-        button.addTarget(self, action: #selector(backBtn), for: .touchUpInside)
-    }
+//        AddressListViewController().esBottomBarWhenPushed = true
+//        self.tabBarController?.tabBar.isHidden = true
 
+        view.backgroundColor = .blue
+        self.view.addSubview(label)
+//        view.addSubview(button)
+        setupButtonLayout()
+//        button.addTarget(self, action: #selector(backBtn), for: .touchUpInside)
+//        hidesBottomBarWhenPushed = true
+    }
+    
     func setupButtonLayout(){
-        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 50 ).isActive = true
+        label.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        label.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor).isActive = true
     }
     
     @objc func backBtn(){
         print("click!!")
         dismiss(animated: true, completion: nil)
+        hidesBottomBarWhenPushed = true
+
     }
 }

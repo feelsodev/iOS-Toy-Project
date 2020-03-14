@@ -14,14 +14,13 @@ class ViewController: UITabBarController {
         super.viewDidLoad()
         
         //탭바 생성
-        let nav = generateNavController(vc: FirstViewController(), title: "jaein")
-        let nav2 = generateNavController(vc: SecondViewController(), title: "sangwon")
-        let nav3 = generateNavController(vc: ThirdViewController(), title: "jongchan")
+        let nav = generateNavController(vc: FirstViewController(), title: "FRIEND")
+        let nav2 = generateNavController(vc: SecondViewController(), title: "LIST")
+        let nav3 = generateNavController(vc: ThirdViewController(), title: "CONFIG")
         UINavigationBar.appearance()
         
         viewControllers = [nav, nav2, nav3]
     }
-    
     
     func generateNavController(vc : UIViewController, title: String) -> UINavigationController{
         let navController = UINavigationController(rootViewController: vc)

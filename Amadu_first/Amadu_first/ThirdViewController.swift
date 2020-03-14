@@ -19,7 +19,7 @@ class ThirdViewController: UIViewController {
 //    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .brown
 //        self.view.addSubview(button)
 //        button.frame = CGRect(x: 100 , y: 220, width: 200, height: 200)
 //        button.backgroundColor = .blue
