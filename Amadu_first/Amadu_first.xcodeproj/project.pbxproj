@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50553B524227918001213C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50553B424227918001213C6 /* Constants.swift */; };
+		A50553B72422792D001213C6 /* UIView-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50553B62422792D001213C6 /* UIView-Ext.swift */; };
+		A50553BC2422AA56001213C6 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50553BB2422AA56001213C6 /* ProfileCell.swift */; };
 		A59A5F0E2417DFC30018C3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */; };
 		A59A5F102417DFC30018C3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */; };
 		A59A5F122417DFC30018C3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F112417DFC30018C3CF /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A50553B424227918001213C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A50553B62422792D001213C6 /* UIView-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Ext.swift"; sourceTree = "<group>"; };
+		A50553BB2422AA56001213C6 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		A59A5F0A2417DFC30018C3CF /* Amadu_first.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amadu_first.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A50553B3242277EE001213C6 /* Extensions-Utillities */ = {
+			isa = PBXGroup;
+			children = (
+				A50553B424227918001213C6 /* Constants.swift */,
+				A50553B62422792D001213C6 /* UIView-Ext.swift */,
+			);
+			path = "Extensions-Utillities";
+			sourceTree = "<group>";
+		};
 		A59A5F012417DFC30018C3CF = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +79,9 @@
 		A59A5F0C2417DFC30018C3CF /* Amadu_first */ = {
 			isa = PBXGroup;
 			children = (
-				A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */,
+				A50553B3242277EE001213C6 /* Extensions-Utillities */,
 				A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */,
+				A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */,
 				A59A5F112417DFC30018C3CF /* ViewController.swift */,
 				A59A5F212417F5290018C3CF /* FirstViewController.swift */,
 				A59A5F232417F5590018C3CF /* SecondViewController.swift */,
@@ -75,6 +91,7 @@
 				A59A5F162417DFC30018C3CF /* Assets.xcassets */,
 				A59A5F182417DFC30018C3CF /* LaunchScreen.storyboard */,
 				A59A5F1B2417DFC30018C3CF /* Info.plist */,
+				A50553BB2422AA56001213C6 /* ProfileCell.swift */,
 			);
 			path = Amadu_first;
 			sourceTree = "<group>";
@@ -156,7 +173,10 @@
 				A59A5F242417F5590018C3CF /* SecondViewController.swift in Sources */,
 				A5C86D1B24194FD600072E90 /* AddressListViewController.swift in Sources */,
 				A59A5F262417F86D0018C3CF /* ThirdViewController.swift in Sources */,
+				A50553B72422792D001213C6 /* UIView-Ext.swift in Sources */,
 				A59A5F222417F5290018C3CF /* FirstViewController.swift in Sources */,
+				A50553B524227918001213C6 /* Constants.swift in Sources */,
+				A50553BC2422AA56001213C6 /* ProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
