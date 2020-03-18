@@ -9,16 +9,50 @@
 import UIKit
 
 class ProfileCell: UITableViewCell {
+    
+    var profileImage = UIImageView()
+    var profileLabel = UILabel()
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addSubview(profileImage)
+        addSubview(profileLabel)
+        
+        configureImageView()
+        configureLabel()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
+    
+    
+    func configureImageView(){
+        profileImage.layer.cornerRadius = 10
+        profileImage.clipsToBounds = true
+    }
+    
+    func configureLabel(){
+        profileLabel.numberOfLines = 0
+        profileLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    func setImageConstraints(){
+        profileImage.translatesAutoresizingMaskIntoConstraints = false
+        profileImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        profileImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+        profileImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        profileImage.widthAnchor.constraint(equalTo: profileImage.heightAnchor, multiplier: 1).isActive = true
+    }
+    
+    func setLabelConstraints(){
+        profileLabel.translatesAutoresizingMaskIntoConstraints = false
+        profileLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        profileLabel.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: 20).isActive = true
+        profileLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        profileLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+    }
+    
 }
+
+
