@@ -6,4 +6,10 @@
 //  Copyright © 2020 once. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct Images {
+    static let pro1 = UIImage(named: "Pro1")!
+    static let pro2 = UIImage(named: "Pro2")!
+    static let pro3 = UIImage(named: "Pro3")!
+}

@@ -20,6 +20,8 @@ class ProfileCell: UITableViewCell {
         
         configureImageView()
         configureLabel()
+        setImageConstraints()
+        setLabelConstraints()
     }
     
     required init?(coder: NSCoder) {

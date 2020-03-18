@@ -11,15 +11,17 @@ import UIKit
 class FirstViewController: UIViewController {
     
     var tableView = UITableView()
+    var profiles: [Profile] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         navigationItem.title = "친구"
         navigationController?.navigationBar.prefersLargeTitles = true
-        configureTableview()
         
+        profiles = fetchData()
+        configureTableview()
     }
     
     func configureTableview(){
@@ -38,7 +40,7 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,4 +48,16 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+
+
+extension FirstViewController{
+    
+    func fetchData() -> [Profile]{
+        let profile1 = Profile(image: Images.pro1, name: "로제짱")
+        let profile2 = Profile(image: Images.pro2, name: "이연재")
+        let profile3 = Profile(image: Images.pro3, name: "최용권")
+        
+        return [profile1, profile2, profile3]
+    }
 }
