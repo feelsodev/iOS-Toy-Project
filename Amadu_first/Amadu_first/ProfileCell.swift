@@ -28,6 +28,11 @@ class ProfileCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(profile: Profile){
+        profileImage.image = profile.image
+        profileLabel.text = profile.name
+    }
+    
     
     func configureImageView(){
         profileImage.layer.cornerRadius = 10

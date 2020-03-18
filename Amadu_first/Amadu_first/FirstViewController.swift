@@ -13,6 +13,9 @@ class FirstViewController: UIViewController {
     var tableView = UITableView()
     var profiles: [Profile] = []
     
+    struct Cells {
+        static let profileCell = "profileCell"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,7 @@ class FirstViewController: UIViewController {
         view.addSubview(tableView)
         setTableviewDelegate()
         tableView.rowHeight = 50
+        tableView.register(ProfileCell.self, forCellReuseIdentifier: Cells.profileCell)
         tableView.pin(to: view)
 
     }
@@ -39,12 +43,17 @@ class FirstViewController: UIViewController {
 }
 
 extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        return profiles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.profileCell) as! ProfileCell
+        let profile = profiles[indexPath.row]
+        cell.set(profile: profile)
+        
+        return cell
     }
     
     
