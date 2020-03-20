@@ -17,7 +17,6 @@ class SecondViewController: UIViewController {
         button.setTitleColor(.red, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        
         //버튼 액션 -> AddressListView로 이동
         button.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
         return button

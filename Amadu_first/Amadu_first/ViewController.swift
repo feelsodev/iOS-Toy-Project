@@ -12,7 +12,7 @@ class ViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //탭바 생성
         let nav = generateNavController(vc: FirstViewController(), title: "FRIEND")
         let nav2 = generateNavController(vc: SecondViewController(), title: "LIST")
