@@ -34,7 +34,7 @@ class FirstViewController: UIViewController {
     func configureTableview(){
         view.addSubview(tableView)
         setTableviewDelegate()
-        tableView.rowHeight = 50
+        tableView.rowHeight = 70
         tableView.register(ProfileCell.self, forCellReuseIdentifier: Cells.profileCell)
         tableView.pin(to: view)
         
@@ -49,7 +49,7 @@ class FirstViewController: UIViewController {
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Candies"
+        searchController.searchBar.placeholder = "Search Friend"
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
@@ -66,25 +66,39 @@ class FirstViewController: UIViewController {
         
         tableView.reloadData()
     }
+    
+    func isFiltering() -> Bool {
+      return searchController.isActive && !searchBarIsEmpty()
+    }
 }
 
 extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering(){
+            return filteredProfiles.count
+        }
+        
         return profiles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.profileCell) as! ProfileCell
-        let profile = profiles[indexPath.row]
+        let profile : Profile
+        
+        if isFiltering(){
+            profile = filteredProfiles[indexPath.row]
+        }else{
+            profile = profiles[indexPath.row]
+        }
+//        let profile = profiles[indexPath.row]
+        
+        
         cell.set(profile: profile)
         
         return cell
     }
-    
-    
 }
-
 
 extension FirstViewController{
     
@@ -92,8 +106,16 @@ extension FirstViewController{
         let profile1 = Profile(image: Images.pro1, name: "로제짱")
         let profile2 = Profile(image: Images.pro2, name: "이연재")
         let profile3 = Profile(image: Images.pro3, name: "최용권")
+        let profile4 = Profile(image: Images.pro4, name: "원빈")
+        let profile5 = Profile(image: Images.pro5, name: "백예린")
+        let profile6 = Profile(image: Images.pro6, name: "존예보스")
+        let profile7 = Profile(image: Images.pro7, name: "정재인")
+        let profile8 = Profile(image: Images.pro8, name: "하정우")
+        let profile9 = Profile(image: Images.pro9, name: "윤상원")
+        let profile10 = Profile(image: Images.pro10, name: "고양이")
+        let profile11 = Profile(image: Images.pro11, name: "강철맨")
         
-        return [profile1, profile2, profile3]
+        return [profile1, profile2, profile3, profile4, profile5, profile6, profile7, profile8, profile9, profile10, profile11]
     }
 }
 

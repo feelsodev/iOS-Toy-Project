@@ -48,7 +48,7 @@ class ProfileCell: UITableViewCell {
         profileImage.translatesAutoresizingMaskIntoConstraints = false
         profileImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         profileImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-        profileImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        profileImage.heightAnchor.constraint(equalToConstant: 60).isActive = true
         profileImage.widthAnchor.constraint(equalTo: profileImage.heightAnchor, multiplier: 1).isActive = true
     }
     
@@ -56,7 +56,7 @@ class ProfileCell: UITableViewCell {
         profileLabel.translatesAutoresizingMaskIntoConstraints = false
         profileLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         profileLabel.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: 20).isActive = true
-        profileLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        profileLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
         profileLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
     }
     
