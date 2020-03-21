@@ -98,11 +98,11 @@
 				A59A5F232417F5590018C3CF /* SecondViewController.swift */,
 				A59A5F252417F86D0018C3CF /* ThirdViewController.swift */,
 				A5C86D1A24194FD600072E90 /* AddressListViewController.swift */,
+				A50553BB2422AA56001213C6 /* ProfileCell.swift */,
 				A59A5F132417DFC30018C3CF /* Main.storyboard */,
 				A59A5F162417DFC30018C3CF /* Assets.xcassets */,
 				A59A5F182417DFC30018C3CF /* LaunchScreen.storyboard */,
 				A59A5F1B2417DFC30018C3CF /* Info.plist */,
-				A50553BB2422AA56001213C6 /* ProfileCell.swift */,
 			);
 			path = Amadu_first;
 			sourceTree = "<group>";

@@ -12,11 +12,12 @@ class SecondViewController: UIViewController {
 
     //MARK: 버튼 생성
     let button : UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton(type: .custom)
         button.setTitle("CLICK", for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        button.setImage(#imageLiteral(resourceName: "Pro11"), for: .normal)
         //버튼 액션 -> AddressListView로 이동
         button.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
         return button
@@ -31,11 +32,15 @@ class SecondViewController: UIViewController {
     
     //MARK: 오토레이아웃 설정
     func setupButtonLayout(){
-        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 50 ).isActive = true
-        button.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor).isActive = true
+//        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+//        button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+//        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        
+        button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 200 ).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 200).isActive = true
+//        button.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor).isActive = true
     }
     
     //MARK: 버튼 클릭 이벤트
