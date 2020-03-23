@@ -26,6 +26,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+//        if let windowScene = scene as? UIWindowScene{
+//
+//            let window = UIWindow(windowScene: windowScene)
+//
+//            let friendVC = UINavigationController(rootViewController: FirstViewController())
+//            friendVC.tabBarItem = UITabBarItem(title: "Friend", image: #imageLiteral(resourceName: "Pro11"), tag: 0)
+//
+//            let listVC = UINavigationController(rootViewController: FirstViewController())
+//            listVC.tabBarItem = UITabBarItem(title: "List", image: #imageLiteral(resourceName: "Pro4"), tag: 1)
+//
+//            let configVC = UINavigationController(rootViewController: FirstViewController())
+//            configVC.tabBarItem = UITabBarItem(title: "Config", image: #imageLiteral(resourceName: "Pro1"), tag: 2)
+//
+//            let tabBarController = UITabBarController()
+//            tabBarController.viewControllers = [friendVC, listVC, configVC]
+//
+//            window.rootViewController = tabBarController
+//            self.window = window
+//            window.makeKeyAndVisible()
+//
+//        }
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

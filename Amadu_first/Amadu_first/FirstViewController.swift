@@ -100,7 +100,7 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension FirstViewController{    
+extension FirstViewController{
     func fetchData() -> [Profile]{
         var prolist : [Profile] = []
         for _ in 0..<30{

@@ -13,13 +13,17 @@ class ViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //탭바 생성
-        let nav = generateNavController(vc: FirstViewController(), title: "FRIEND")
-        let nav2 = generateNavController(vc: SecondViewController(), title: "LIST")
-        let nav3 = generateNavController(vc: ThirdViewController(), title: "CONFIG")
-        UINavigationBar.appearance()
+//        탭바 생성
+        let nav = generateNavController(vc: FirstViewController(), title: "FRIEND", image: #imageLiteral(resourceName: "user_image"))
+        let nav2 = generateNavController(vc: SecondViewController(), title: "LIST", image: #imageLiteral(resourceName: "list"))
+        let nav3 = generateNavController(vc: ThirdViewController(), title: "CONFIG", image: #imageLiteral(resourceName: "setting"))
         
+        UITabBar.appearance().barTintColor = .black
+        UITabBar.appearance().tintColor = .red
+//        UINavigationBar.appearance()
+
         viewControllers = [nav, nav2, nav3]
+
         
         delegate = self
         
@@ -30,14 +34,28 @@ class ViewController: UITabBarController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
         swipeLeft.direction = .left
         self.view.addGestureRecognizer(swipeLeft)
-        
     }
     
-    func generateNavController(vc : UIViewController, title: String) -> UINavigationController{
+    func generateNavController(vc : UIViewController, title: String, image : UIImage) -> UINavigationController{
         let navController = UINavigationController(rootViewController: vc)
+//        navController.tabBarItem = UITabBarItem(title: title , image: #imageLiteral(resourceName: "Pro11"), tag: )
         navController.title = title
+        navController.tabBarItem.image = image
         return navController
     }
+    
+//    func generateNavController(){
+//        let friendVC = UINavigationController(rootViewController: FirstViewController())
+//        friendVC.tabBarItem = UITabBarItem(title: "Friend", image: #imageLiteral(resourceName: <#T##String#>), tag: 0)
+//
+//        let listVC = UINavigationController(rootViewController: FirstViewController())
+//        friendVC.tabBarItem = UITabBarItem(title: "List", image: #imageLiteral(resourceName: <#T##String#>), tag: 2)
+//
+//        let configVC = UINavigationController(rootViewController: FirstViewController())
+//        friendVC.tabBarItem = UITabBarItem(title: "Config", image: #imageLiteral(resourceName: <#T##String#>), tag: 3)
+//
+//        return [friendVC, listVC, configVC]
+//    }
     
     @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
         
