@@ -98,6 +98,28 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    //
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        deleteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [deleteAction(at: indexPath)])
+    }
+    
+    func deleteAction(at indexPath: IndexPath) -> UIContextualAction{
+        let action = UIContextualAction(style: .normal, title: "delete") { (action, view, completion) in
+            self.profiles.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        action.backgroundColor = .red
+        
+        return action
+    }
 }
 
 extension FirstViewController{
