@@ -20,10 +20,8 @@ class ViewController: UITabBarController {
         
         UITabBar.appearance().barTintColor = .black
         UITabBar.appearance().tintColor = .red
-//        UINavigationBar.appearance()
 
         viewControllers = [nav, nav2, nav3]
-
         
         delegate = self
         
@@ -38,24 +36,10 @@ class ViewController: UITabBarController {
     
     func generateNavController(vc : UIViewController, title: String, image : UIImage) -> UINavigationController{
         let navController = UINavigationController(rootViewController: vc)
-//        navController.tabBarItem = UITabBarItem(title: title , image: #imageLiteral(resourceName: "Pro11"), tag: )
         navController.title = title
         navController.tabBarItem.image = image
         return navController
     }
-    
-//    func generateNavController(){
-//        let friendVC = UINavigationController(rootViewController: FirstViewController())
-//        friendVC.tabBarItem = UITabBarItem(title: "Friend", image: #imageLiteral(resourceName: <#T##String#>), tag: 0)
-//
-//        let listVC = UINavigationController(rootViewController: FirstViewController())
-//        friendVC.tabBarItem = UITabBarItem(title: "List", image: #imageLiteral(resourceName: <#T##String#>), tag: 2)
-//
-//        let configVC = UINavigationController(rootViewController: FirstViewController())
-//        friendVC.tabBarItem = UITabBarItem(title: "Config", image: #imageLiteral(resourceName: <#T##String#>), tag: 3)
-//
-//        return [friendVC, listVC, configVC]
-//    }
     
     @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
         

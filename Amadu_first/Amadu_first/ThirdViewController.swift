@@ -10,19 +10,9 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
-//    let button: UIButton = {
-//        let tempButton = UIButton(type: .system)
-//        tempButton.setTitle("TEMP", for: .normal)
-//        tempButton.setTitleColor(.red, for: .normal)
-//        tempButton.translatesAutoresizingMaskIntoConstraints = false
-//        return tempButton
-//    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
-//        self.view.addSubview(button)
-//        button.frame = CGRect(x: 100 , y: 220, width: 200, height: 200)
-//        button.backgroundColor = .blue
     }
     
 }

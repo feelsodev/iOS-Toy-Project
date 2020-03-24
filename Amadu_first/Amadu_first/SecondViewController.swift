@@ -28,6 +28,9 @@ class SecondViewController: UIViewController {
         view.backgroundColor = .white   //배경 화이트
         view.addSubview(button)         //버튼 추가
         setupButtonLayout()             //오토레이아웃
+        
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickBtn2))
+        self.navigationItem.rightBarButtonItem = add
     }
     
     //MARK: 오토레이아웃 설정
@@ -50,5 +53,12 @@ class SecondViewController: UIViewController {
         addVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(addVC, animated: true)
 //        self.present(AddressListViewController(), animated: true, completion: nil)
+    }
+    
+    @objc func clickBtn2(){
+        let addVC = AddressListViewController()
+        addVC.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(addVC, animated: true)
+        self.present(AddressListViewController(), animated: true, completion: nil)
     }
 }

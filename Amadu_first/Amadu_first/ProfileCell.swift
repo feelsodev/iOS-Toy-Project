@@ -48,7 +48,7 @@ class ProfileCell: UITableViewCell {
     func setImageConstraints(){
         profileImage.translatesAutoresizingMaskIntoConstraints = false
         profileImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        profileImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+        profileImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
         profileImage.heightAnchor.constraint(equalToConstant: 48).isActive = true
         profileImage.widthAnchor.constraint(equalTo: profileImage.heightAnchor, multiplier: 1).isActive = true
     }
