@@ -31,19 +31,15 @@ class SecondViewController: UIViewController {
         
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickBtn2))
         self.navigationItem.rightBarButtonItem = add
+        self.navigationItem.title = "약속리스트"
     }
     
     //MARK: 오토레이아웃 설정
     func setupButtonLayout(){
-//        button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-//        button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-//        button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        
         button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         button.heightAnchor.constraint(equalToConstant: 200 ).isActive = true
         button.widthAnchor.constraint(equalToConstant: 200).isActive = true
-//        button.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor).isActive = true
     }
     
     //MARK: 버튼 클릭 이벤트
@@ -56,9 +52,12 @@ class SecondViewController: UIViewController {
     }
     
     @objc func clickBtn2(){
-        let addVC = AddressListViewController()
-        addVC.hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(addVC, animated: true)
-        self.present(AddressListViewController(), animated: true, completion: nil)
+        let addVC = AddAppointmentListViewController()
+        let navigation = UINavigationController(rootViewController: addVC)
+//        addVC.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(AddAppointmentListViewController(), animated: true)
+//        self.present(AddAppointmentListViewController(), animated: true, completion: nil)
+//        addVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(navigation, animated: true , completion: nil)
     }
 }
