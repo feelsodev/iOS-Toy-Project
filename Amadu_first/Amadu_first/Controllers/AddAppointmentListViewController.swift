@@ -10,8 +10,6 @@ import UIKit
 
 class AddAppointmentListViewController: UIViewController {
     
-    var names : [Appoint] = []
-    
     let inputText : UITextField = {
         let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
         text.layer.borderWidth = 1.0
@@ -35,16 +33,18 @@ class AddAppointmentListViewController: UIViewController {
     }
 
     @objc func saveView(){
+//        var userName : String
         guard let name = inputText.text,
             name.count > 0 else{
                 alert(message: "메모를 입력하세요")
                 return
         }
-        names.append(Appoint(name: name))
+        let userName = Appoint(name: name)
+        Appoint.dummyList.append(userName)
+        
 //        newName.append(Appoint(name: name))
 //        for _ in 1..<names.count-1{
-        print("dsdsds\(names)")
-        
+//        print("dsdsds" + userName)
         dismiss(animated: true, completion: nil)
     }
     

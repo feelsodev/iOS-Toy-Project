@@ -10,4 +10,12 @@ import UIKit
 
 struct Appoint {
     var name : String
+    
+    init(name : String) {
+        self.name = name
+    }
+    
+    static var dummyList = [
+        Appoint(name: "hi")
+    ]
 }

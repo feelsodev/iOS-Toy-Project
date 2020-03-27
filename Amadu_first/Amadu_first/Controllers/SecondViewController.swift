@@ -23,12 +23,25 @@ class SecondViewController: UIViewController {
 //        return button
 //    }()
     
+    
+    
+    let outputText : UILabel = {
+        let text1 = UILabel(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
+//        let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
+        text1.layer.borderWidth = 1.0
+        text1.layer.borderColor = UIColor.black.cgColor
+        return text1
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white   //배경 화이트
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickBtn2))
         self.navigationItem.rightBarButtonItem = add
         self.navigationItem.title = "약속리스트"
+        view.addSubview(outputText)
+        outputText.text = Appoint.dummyList[0]
+        
     }
     
     //MARK: 버튼 클릭 이벤트
@@ -48,5 +61,6 @@ class SecondViewController: UIViewController {
 //        self.present(AddAppointmentListViewController(), animated: true, completion: nil)
 //        addVC.modalPresentationStyle = .fullScreen
         self.navigationController?.present(navigation, animated: true , completion: nil)
+        
     }
 }
