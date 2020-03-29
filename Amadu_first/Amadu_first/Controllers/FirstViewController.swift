@@ -37,7 +37,6 @@ class FirstViewController: UIViewController {
         tableView.rowHeight = 60
         tableView.register(ProfileCell.self, forCellReuseIdentifier: Cells.profileCell)
         tableView.pin(to: view)
-        
     }
     
     func setTableviewDelegate(){
@@ -45,6 +44,7 @@ class FirstViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    //MARK:Set search profile
     func setSearchController(){
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
@@ -72,6 +72,7 @@ class FirstViewController: UIViewController {
     }
 }
 
+//MARK: Add TableView
 extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,7 +94,6 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
         }
 //        let profile = profiles[indexPath.row]
         
-        
         cell.set(profile: profile)
         
         return cell
@@ -103,8 +103,6 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
         return true
     }
     
-    
-    //
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 //        deleteAction(at: indexPath)
         return UISwipeActionsConfiguration(actions: [deleteAction(at: indexPath)])
@@ -122,6 +120,8 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
     }
 }
 
+
+//MARK: Profile data setting
 extension FirstViewController{
     func fetchData() -> [Profile]{
         var prolist : [Profile] = []
@@ -149,6 +149,7 @@ extension FirstViewController{
     }
 }
 
+//MARK: Search setting
 extension FirstViewController : UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)

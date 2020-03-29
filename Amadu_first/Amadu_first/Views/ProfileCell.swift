@@ -34,7 +34,6 @@ class ProfileCell: UITableViewCell {
         profileLabel.text = profile.name
     }
     
-    
     func configureImageView(){
         profileImage.layer.cornerRadius = 10
         profileImage.clipsToBounds = true

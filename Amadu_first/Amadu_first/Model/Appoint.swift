@@ -14,8 +14,4 @@ struct Appoint {
     init(name : String) {
         self.name = name
     }
-    
-    static var dummyList = [
-        Appoint(name: "hi")
-    ]
 }

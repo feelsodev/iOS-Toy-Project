@@ -39,8 +39,6 @@ class AddressListViewController: UIViewController {
         self.view.addSubview(label)
 //        view.addSubview(button)
         setupButtonLayout()
-//        button.addTarget(self, action: #selector(backBtn), for: .touchUpInside)
-//        hidesBottomBarWhenPushed = true
     }
     
     func setupButtonLayout(){

@@ -17,11 +17,12 @@ class ViewController: UITabBarController {
         let nav = generateNavController(vc: FirstViewController(), title: "FRIEND", image: #imageLiteral(resourceName: "user_image"))
         let nav2 = generateNavController(vc: SecondViewController(), title: "LIST", image: #imageLiteral(resourceName: "list"))
         let nav3 = generateNavController(vc: ThirdViewController(), title: "CONFIG", image: #imageLiteral(resourceName: "setting"))
+        let nav4 = generateNavController(vc: AlarmViewController(), title: "ALARM", image: #imageLiteral(resourceName: "alarm"))
         
         UITabBar.appearance().barTintColor = .black
         UITabBar.appearance().tintColor = .red
 
-        viewControllers = [nav, nav2, nav3]
+        viewControllers = [nav, nav2, nav3, nav4]
         
         delegate = self
         

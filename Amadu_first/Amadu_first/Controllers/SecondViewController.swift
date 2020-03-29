@@ -8,26 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
-    //MARK: 버튼 생성
-//    let button : UIButton = {
-//        let button = UIButton(type: .custom)
-//        button.setTitle("CLICK", for: .normal)
-//        button.setTitleColor(.red, for: .normal)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-//        button.setImage(#imageLiteral(resourceName: "Pro11"), for: .normal)
-//        //버튼 액션 -> AddressListView로 이동
-//        button.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
-//        return button
-//    }()
+class SecondViewController: UIViewController, SendDataDelegate{
     
+    func sendData(data: String) {
+        self.outputText.text = data
+    }
     
-    
-    let outputText : UILabel = {
-        let text1 = UILabel(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
-//        let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
+    let outputText : UITextField = {
+        let text1 = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
         text1.layer.borderWidth = 1.0
         text1.layer.borderColor = UIColor.black.cgColor
         return text1
@@ -40,8 +28,11 @@ class SecondViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = add
         self.navigationItem.title = "약속리스트"
         view.addSubview(outputText)
-        outputText.text = Appoint.dummyList[0]
         
+    }
+    
+    func setContext(name : String){
+        self.outputText.text = name
     }
     
     //MARK: 버튼 클릭 이벤트
@@ -50,17 +41,14 @@ class SecondViewController: UIViewController {
         let addVC = AddressListViewController()
         addVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(addVC, animated: true)
-//        self.present(AddressListViewController(), animated: true, completion: nil)
     }
     
     @objc func clickBtn2(){
         let addVC = AddAppointmentListViewController()
         let navigation = UINavigationController(rootViewController: addVC)
-//        addVC.hidesBottomBarWhenPushed = true
-//        self.navigationController?.pushViewController(AddAppointmentListViewController(), animated: true)
-//        self.present(AddAppointmentListViewController(), animated: true, completion: nil)
-//        addVC.modalPresentationStyle = .fullScreen
         self.navigationController?.present(navigation, animated: true , completion: nil)
         
     }
 }
+
+
