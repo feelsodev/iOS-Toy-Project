@@ -9,13 +9,13 @@
 import UIKit
 
 class SecondViewController: UIViewController, SendDataDelegate{
-    
     func sendData(data: String) {
         self.outputText.text = data
+        print("anybody")
     }
     
-    let outputText : UITextField = {
-        let text1 = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
+    let outputText : UILabel = {
+        let text1 = UILabel(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
         text1.layer.borderWidth = 1.0
         text1.layer.borderColor = UIColor.black.cgColor
         return text1
@@ -31,10 +31,6 @@ class SecondViewController: UIViewController, SendDataDelegate{
         
     }
     
-    func setContext(name : String){
-        self.outputText.text = name
-    }
-    
     //MARK: 버튼 클릭 이벤트
     @objc func clickBtn(){
         print("click!!")
@@ -46,7 +42,9 @@ class SecondViewController: UIViewController, SendDataDelegate{
     @objc func clickBtn2(){
         let addVC = AddAppointmentListViewController()
         let navigation = UINavigationController(rootViewController: addVC)
+        addVC.delegate = self
         self.navigationController?.present(navigation, animated: true , completion: nil)
+        
         
     }
 }

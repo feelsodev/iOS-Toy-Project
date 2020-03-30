@@ -8,9 +8,13 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(data : String)
+}
+
 class AddAppointmentListViewController: UIViewController {
-    
-    var send : SendDataDelegate?
+        
+    var delegate : SendDataDelegate?
     
     let inputText : UITextField = {
         let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
@@ -41,7 +45,8 @@ class AddAppointmentListViewController: UIViewController {
                 return
         }
 
-        send?.sendData(data: name)
+        delegate?.sendData(data: name)
+//        send?.sendData(data: name)
         dismiss(animated: true, completion: nil)
     }
     

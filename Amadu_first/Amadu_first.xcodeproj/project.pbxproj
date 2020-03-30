@@ -12,7 +12,6 @@
 		A50553BC2422AA56001213C6 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50553BB2422AA56001213C6 /* ProfileCell.swift */; };
 		A50553BF2422AEEC001213C6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50553BE2422AEEC001213C6 /* Profile.swift */; };
 		A53C4DDF242B7E13008803C6 /* AddAppointmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C4DDE242B7E13008803C6 /* AddAppointmentListViewController.swift */; };
-		A58EAA96242E5873001E4111 /* SendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58EAA95242E5873001E4111 /* SendData.swift */; };
 		A59A5F0E2417DFC30018C3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */; };
 		A59A5F102417DFC30018C3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */; };
 		A59A5F122417DFC30018C3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F112417DFC30018C3CF /* ViewController.swift */; };
@@ -34,7 +33,6 @@
 		A50553BB2422AA56001213C6 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		A50553BE2422AEEC001213C6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A53C4DDE242B7E13008803C6 /* AddAppointmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppointmentListViewController.swift; sourceTree = "<group>"; };
-		A58EAA95242E5873001E4111 /* SendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendData.swift; sourceTree = "<group>"; };
 		A59A5F0A2417DFC30018C3CF /* Amadu_first.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amadu_first.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				A50553B424227918001213C6 /* Constants.swift */,
 				A50553B62422792D001213C6 /* UIView-Ext.swift */,
 				A5C852AB242CF0AB006320E4 /* UIView+Alert.swift */,
-				A58EAA95242E5873001E4111 /* SendData.swift */,
 			);
 			path = "Extensions-Utillities";
 			sourceTree = "<group>";
@@ -214,7 +211,6 @@
 				A59A5F0E2417DFC30018C3CF /* AppDelegate.swift in Sources */,
 				A59A5F102417DFC30018C3CF /* SceneDelegate.swift in Sources */,
 				A5C852AE242CF201006320E4 /* Appoint.swift in Sources */,
-				A58EAA96242E5873001E4111 /* SendData.swift in Sources */,
 				A59A5F242417F5590018C3CF /* SecondViewController.swift in Sources */,
 				A5C852AC242CF0AB006320E4 /* UIView+Alert.swift in Sources */,
 				A53C4DDF242B7E13008803C6 /* AddAppointmentListViewController.swift in Sources */,
