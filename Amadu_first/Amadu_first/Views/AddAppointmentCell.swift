@@ -16,6 +16,8 @@ class AddAppointmentCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         addSubview(tempLabel)
+        configureLabel()
+        setLabelConstraints()
 
     }
     
@@ -32,6 +34,20 @@ class AddAppointmentCell: UITableViewCell {
         tempLabel.adjustsFontSizeToFitWidth = true
     }
     
+    func setLabelConstraints(){
+        tempLabel.translatesAutoresizingMaskIntoConstraints = false
+        tempLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        tempLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
+        tempLabel.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        tempLabel.widthAnchor.constraint(equalTo: tempLabel.heightAnchor, multiplier: 1).isActive = true
+
+        
+//        profileImage.translatesAutoresizingMaskIntoConstraints = false
+//        profileImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+//        profileImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
+//        profileImage.heightAnchor.constraint(equalToConstant: 48).isActive = true
+//        profileImage.widthAnchor.constraint(equalTo: profileImage.heightAnchor, multiplier: 1).isActive = true
+    }
     
     
 }

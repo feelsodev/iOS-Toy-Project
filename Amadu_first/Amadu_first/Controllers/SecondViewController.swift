@@ -26,6 +26,8 @@ class SecondViewController: UIViewController{
     
     func configureTableview() {
         view.addSubview(tableView)
+        setTableViewDelegate()
+        tableView.rowHeight = 60
         tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: cellId)
     }
     
@@ -50,7 +52,7 @@ extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! AddAppointmentCell
         return cell
     }
     
