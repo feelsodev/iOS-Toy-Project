@@ -8,18 +8,10 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, SendDataDelegate{
-    func sendData(data: String) {
-        self.outputText.text = data
-        print("anybody")
-    }
+class SecondViewController: UIViewController{
     
-    let outputText : UILabel = {
-        let text1 = UILabel(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
-        text1.layer.borderWidth = 1.0
-        text1.layer.borderColor = UIColor.black.cgColor
-        return text1
-    }()
+    let cellId = "cellId2"
+    var tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,26 +19,39 @@ class SecondViewController: UIViewController, SendDataDelegate{
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickBtn2))
         self.navigationItem.rightBarButtonItem = add
         self.navigationItem.title = "약속리스트"
-        view.addSubview(outputText)
+        configureTableview()
         
+        
+    }
+    
+    func configureTableview() {
+        view.addSubview(tableView)
+        tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: cellId)
+    }
+    
+    func setTableViewDelegate(){
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     //MARK: 버튼 클릭 이벤트
-    @objc func clickBtn(){
-        print("click!!")
-        let addVC = AddressListViewController()
-        addVC.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(addVC, animated: true)
-    }
-    
     @objc func clickBtn2(){
         let addVC = AddAppointmentListViewController()
         let navigation = UINavigationController(rootViewController: addVC)
-        addVC.delegate = self
+//        addVC.delegate = self
         self.navigationController?.present(navigation, animated: true , completion: nil)
-        
-        
+
     }
 }
 
-
+extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        return cell
+    }
+    
+}

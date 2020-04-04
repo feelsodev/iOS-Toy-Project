@@ -20,6 +20,7 @@ class AddAppointmentListViewController: UIViewController {
         let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
         text.layer.borderWidth = 1.0
         text.layer.borderColor = UIColor.black.cgColor
+        text.textColor = .black
         return text
     }()
     

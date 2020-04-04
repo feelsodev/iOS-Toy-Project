@@ -26,13 +26,13 @@ class ViewController: UITabBarController {
         
         delegate = self
         
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
-        swipeLeft.direction = .left
-        self.view.addGestureRecognizer(swipeLeft)
+//        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
+//        swipeRight.direction = .right
+//        self.view.addGestureRecognizer(swipeRight)
+//
+//        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
+//        swipeLeft.direction = .left
+//        self.view.addGestureRecognizer(swipeLeft)
     }
     
     func generateNavController(vc : UIViewController, title: String, image : UIImage) -> UINavigationController{
@@ -42,18 +42,18 @@ class ViewController: UITabBarController {
         return navController
     }
     
-    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
-        
-        if gesture.direction == .left {
-            if (self.selectedIndex) < 2 { // 슬라이드할 탭바 갯수 지정 (전체 탭바 갯수 - 1)
-                animateToTab(toIndex: self.selectedIndex+1)
-            }
-        } else if gesture.direction == .right {
-            if (self.selectedIndex) > 0 {
-                animateToTab(toIndex: self.selectedIndex - 1)
-            }
-        }
-    }
+//    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
+//
+//        if gesture.direction == .left {
+//            if (self.selectedIndex) < 2 { // 슬라이드할 탭바 갯수 지정 (전체 탭바 갯수 - 1)
+//                animateToTab(toIndex: self.selectedIndex+1)
+//            }
+//        } else if gesture.direction == .right {
+//            if (self.selectedIndex) > 0 {
+//                animateToTab(toIndex: self.selectedIndex - 1)
+//            }
+//        }
+//    }
     
 }
 
