@@ -125,25 +125,12 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
 extension FirstViewController{
     func fetchData() -> [Profile]{
         var prolist : [Profile] = []
+        
         for _ in 0..<30{
-            for i in 1..<11{
+            for i in 1...10{
                 prolist.append(Profile(image: UIImage(named: "Pro\(i)")!, name: "이연재"))
             }
         }
-//        = Profile(image: UIImage(named: "Pro\(i)")!, name: "로제짱")
-//        let profile1 = Profile(image: Images.pro1, name: "로제짱")
-//        let profile2 = Profile(image: Images.pro2, name: "이연재")
-//        let profile3 = Profile(image: Images.pro3, name: "최용권")
-//        let profile4 = Profile(image: Images.pro4, name: "원빈")
-//        let profile5 = Profile(image: Images.pro5, name: "백예린")
-//        let profile6 = Profile(image: Images.pro6, name: "존예보스")
-//        let profile7 = Profile(image: Images.pro7, name: "정재인")
-//        let profile8 = Profile(image: Images.pro8, name: "하정우")
-//        let profile9 = Profile(image: Images.pro9, name: "윤상원")
-//        let profile10 = Profile(image: Images.pro10, name: "고양이")
-//        let profile11 = Profile(image: Images.pro11, name: "강철맨")
-//
-//        return [profile0, profile1, profile2, profile3, profile4, profile5, profile6, profile7, profile8, profile9, profile10, profile11]
         
         return prolist
     }
@@ -155,3 +142,6 @@ extension FirstViewController : UISearchResultsUpdating{
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }
+
+
+

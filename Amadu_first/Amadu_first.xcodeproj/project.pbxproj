@@ -12,6 +12,7 @@
 		A50553BC2422AA56001213C6 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50553BB2422AA56001213C6 /* ProfileCell.swift */; };
 		A50553BF2422AEEC001213C6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50553BE2422AEEC001213C6 /* Profile.swift */; };
 		A53C4DDF242B7E13008803C6 /* AddAppointmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C4DDE242B7E13008803C6 /* AddAppointmentListViewController.swift */; };
+		A5419E40243CA9B900A9D27D /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5419E3F243CA9B900A9D27D /* AddressData.swift */; };
 		A59A5F0E2417DFC30018C3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */; };
 		A59A5F102417DFC30018C3CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */; };
 		A59A5F122417DFC30018C3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A5F112417DFC30018C3CF /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		A50553BB2422AA56001213C6 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		A50553BE2422AEEC001213C6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A53C4DDE242B7E13008803C6 /* AddAppointmentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppointmentListViewController.swift; sourceTree = "<group>"; };
+		A5419E3F243CA9B900A9D27D /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
 		A59A5F0A2417DFC30018C3CF /* Amadu_first.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amadu_first.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59A5F0D2417DFC30018C3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59A5F0F2417DFC30018C3CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				A50553BE2422AEEC001213C6 /* Profile.swift */,
+				A5419E3F243CA9B900A9D27D /* AddressData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				A59A5F262417F86D0018C3CF /* ThirdViewController.swift in Sources */,
 				A50553B72422792D001213C6 /* UIView-Ext.swift in Sources */,
 				A59A5F222417F5290018C3CF /* FirstViewController.swift in Sources */,
+				A5419E40243CA9B900A9D27D /* AddressData.swift in Sources */,
 				A50553BF2422AEEC001213C6 /* Profile.swift in Sources */,
 				A50553B524227918001213C6 /* Constants.swift in Sources */,
 				A50553BC2422AA56001213C6 /* ProfileCell.swift in Sources */,

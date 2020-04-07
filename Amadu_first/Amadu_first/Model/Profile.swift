@@ -9,7 +9,6 @@
 import UIKit
 
 struct Profile {
-//    var ch : Bool
     var image : UIImage
     var name : String
 }

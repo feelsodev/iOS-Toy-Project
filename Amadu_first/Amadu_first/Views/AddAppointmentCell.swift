@@ -14,19 +14,18 @@ class AddAppointmentCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         addSubview(tempLabel)
+        
         configureLabel()
         setLabelConstraints()
-
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(){
-        tempLabel.text = "temp"
+    func set2(data: AddressData){
+        tempLabel.text = data.title
     }
     
     func configureLabel(){
@@ -39,8 +38,7 @@ class AddAppointmentCell: UITableViewCell {
         tempLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         tempLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
         tempLabel.heightAnchor.constraint(equalToConstant: 48).isActive = true
-        tempLabel.widthAnchor.constraint(equalTo: tempLabel.heightAnchor, multiplier: 1).isActive = true
-
+        tempLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
         
 //        profileImage.translatesAutoresizingMaskIntoConstraints = false
 //        profileImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true

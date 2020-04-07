@@ -12,6 +12,7 @@ class SecondViewController: UIViewController{
     
     let cellId = "cellId2"
     var tableView = UITableView()
+    var addressDatas:[AddressData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +20,10 @@ class SecondViewController: UIViewController{
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickBtn2))
         self.navigationItem.rightBarButtonItem = add
         self.navigationItem.title = "약속리스트"
+        for _ in 0...5{
+            addressDatas.append(AddressData(title: "sangwon"))
+        }
         configureTableview()
-        
         
     }
     
@@ -29,6 +32,7 @@ class SecondViewController: UIViewController{
         setTableViewDelegate()
         tableView.rowHeight = 60
         tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: cellId)
+        tableView.pin(to: view)
     }
     
     func setTableViewDelegate(){
@@ -47,12 +51,17 @@ class SecondViewController: UIViewController{
 }
 
 extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return addressDatas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! AddAppointmentCell
+        
+        let addressData : AddressData = addressDatas[indexPath.row]
+        cell.set2(data: addressData)
+        
         return cell
     }
     

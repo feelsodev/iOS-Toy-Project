@@ -53,7 +53,7 @@ class ProfileCell: UITableViewCell {
     }
     
     func setLabelConstraints(){
-        profileLabel.translatesAutoresizingMaskIntoConstraints = false
+    profileLabel.translatesAutoresizingMaskIntoConstraints = false
         profileLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         profileLabel.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: 20).isActive = true
         profileLabel.heightAnchor.constraint(equalToConstant: 48).isActive = true
