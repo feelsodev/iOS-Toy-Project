@@ -10,28 +10,29 @@ import UIKit
 
 class SecondViewController: UIViewController{
     
-    let cellId = "cellId2"
+    static let cellId = "cellId2"
     var tableView = UITableView()
-    var addressDatas:[AddressData] = []
+
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        tableView.reloadData()
+//        print(#function)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white   //배경 화이트
-        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickBtn2))
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(clickBtn))
         self.navigationItem.rightBarButtonItem = add
         self.navigationItem.title = "약속리스트"
-        for _ in 0...5{
-            addressDatas.append(AddressData(title: "sangwon"))
-        }
         configureTableview()
-        
     }
     
     func configureTableview() {
         view.addSubview(tableView)
         setTableViewDelegate()
         tableView.rowHeight = 60
-        tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: SecondViewController.cellId)
         tableView.pin(to: view)
     }
     
@@ -41,27 +42,26 @@ class SecondViewController: UIViewController{
     }
     
     //MARK: 버튼 클릭 이벤트
-    @objc func clickBtn2(){
+    @objc func clickBtn(){
         let addVC = AddAppointmentListViewController()
         let navigation = UINavigationController(rootViewController: addVC)
-//        addVC.delegate = self
         self.navigationController?.present(navigation, animated: true , completion: nil)
-
     }
 }
 
 extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return addressDatas.count
+        return AddressData.dummyList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! AddAppointmentCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SecondViewController.cellId, for: indexPath) as! AddAppointmentCell
         
-        let addressData : AddressData = addressDatas[indexPath.row]
+        let addressData = AddressData.dummyList[indexPath.row]
         cell.set2(data: addressData)
         
+        print("cell reload")
         return cell
     }
     

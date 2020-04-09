@@ -65,6 +65,7 @@ class FirstViewController: UIViewController {
         })
         
         tableView.reloadData()
+        print("data reload")
     }
     
     func isFiltering() -> Bool {
@@ -85,14 +86,13 @@ extension FirstViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.profileCell) as! ProfileCell
-        let profile : Profile
         
+        let profile : Profile
         if isFiltering(){
             profile = filteredProfiles[indexPath.row]
         }else{
             profile = profiles[indexPath.row]
         }
-//        let profile = profiles[indexPath.row]
         
         cell.set(profile: profile)
         

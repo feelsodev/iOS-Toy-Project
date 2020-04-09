@@ -8,7 +8,18 @@
 
 import UIKit
 
-struct AddressData {
-    var title : String
-}
+//struct AddressData {
+//    var title : String
+//}
 
+class AddressData{
+    var title : String
+    
+    init(title : String){
+        self.title = title
+    }
+    
+    static var dummyList : [AddressData] = [
+        AddressData(title: "ehvkd")
+    ]
+}

@@ -8,14 +8,8 @@
 
 import UIKit
 
-protocol SendDataDelegate {
-    func sendData(data : String)
-}
-
 class AddAppointmentListViewController: UIViewController {
-        
-    var delegate : SendDataDelegate?
-    
+
     let inputText : UITextField = {
         let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
         text.layer.borderWidth = 1.0
@@ -46,8 +40,12 @@ class AddAppointmentListViewController: UIViewController {
                 return
         }
 
-        delegate?.sendData(data: name)
-//        send?.sendData(data: name)
+        let memo = AddressData(title: name)
+        AddressData.dummyList.append(memo)
+        
+        let scView = SecondViewController()
+        scView.tableView.reloadData()
+        
         dismiss(animated: true, completion: nil)
     }
     
