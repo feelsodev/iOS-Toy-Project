@@ -20,6 +20,6 @@ class AddressData{
     }
     
     static var dummyList : [AddressData] = [
-        AddressData(title: "ehvkd")
+        AddressData(title: "Dummy Data")
     ]
 }

@@ -8,8 +8,14 @@
 
 import UIKit
 
-class AddAppointmentListViewController: UIViewController {
+protocol reloadTable {
+    func reload()
+}
 
+class AddAppointmentListViewController: UIViewController {
+    
+    var delegate : reloadTable?
+    
     let inputText : UITextField = {
         let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
         text.layer.borderWidth = 1.0
@@ -33,7 +39,7 @@ class AddAppointmentListViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = cancel
     }
 
-    @objc func saveView(){
+    @objc func saveView(_ sender : UINavigationItem){
         guard let name = inputText.text,
             name.count > 0 else{
                 alert(message: "메모를 입력하세요")
@@ -43,8 +49,8 @@ class AddAppointmentListViewController: UIViewController {
         let memo = AddressData(title: name)
         AddressData.dummyList.append(memo)
         
-        let scView = SecondViewController()
-        scView.tableView.reloadData()
+        delegate?.reload()
+        
         
         dismiss(animated: true, completion: nil)
     }

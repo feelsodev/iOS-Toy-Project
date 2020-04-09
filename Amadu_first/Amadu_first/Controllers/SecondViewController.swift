@@ -10,11 +10,11 @@ import UIKit
 
 class SecondViewController: UIViewController{
     
-    static let cellId = "cellId2"
+    let cellId = "cellId2"
     var tableView = UITableView()
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
 //        tableView.reloadData()
 //        print(#function)
 //    }
@@ -32,7 +32,7 @@ class SecondViewController: UIViewController{
         view.addSubview(tableView)
         setTableViewDelegate()
         tableView.rowHeight = 60
-        tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: SecondViewController.cellId)
+        tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: cellId)
         tableView.pin(to: view)
     }
     
@@ -44,8 +44,10 @@ class SecondViewController: UIViewController{
     //MARK: 버튼 클릭 이벤트
     @objc func clickBtn(){
         let addVC = AddAppointmentListViewController()
+        addVC.delegate = self
         let navigation = UINavigationController(rootViewController: addVC)
         self.navigationController?.present(navigation, animated: true , completion: nil)
+
     }
 }
 
@@ -56,7 +58,7 @@ extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SecondViewController.cellId, for: indexPath) as! AddAppointmentCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! AddAppointmentCell
         
         let addressData = AddressData.dummyList[indexPath.row]
         cell.set2(data: addressData)
@@ -65,4 +67,10 @@ extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+}
+
+extension SecondViewController : reloadTable{
+    func reload() {
+        self.tableView.reloadData()
+    }
 }
