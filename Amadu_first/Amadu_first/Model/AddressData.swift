@@ -8,10 +8,6 @@
 
 import UIKit
 
-//struct AddressData {
-//    var title : String
-//}
-
 class AddressData{
     var title : String
     
@@ -20,6 +16,5 @@ class AddressData{
     }
     
     static var dummyList : [AddressData] = [
-        AddressData(title: "Dummy Data")
     ]
 }

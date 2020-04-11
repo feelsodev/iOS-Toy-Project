@@ -12,12 +12,6 @@ class SecondViewController: UIViewController{
     
     let cellId = "cellId2"
     var tableView = UITableView()
-
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        tableView.reloadData()
-//        print(#function)
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +25,7 @@ class SecondViewController: UIViewController{
     func configureTableview() {
         view.addSubview(tableView)
         setTableViewDelegate()
-        tableView.rowHeight = 60
+        tableView.rowHeight = 120
         tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: cellId)
         tableView.pin(to: view)
     }
