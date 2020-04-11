@@ -10,9 +10,11 @@ import UIKit
 
 class AddressData{
     var title : String
+    var time : String
     
-    init(title : String){
+    init(title : String, time: String){
         self.title = title
+        self.time = time
     }
     
     static var dummyList : [AddressData] = [

@@ -24,11 +24,20 @@ class AddAppointmentListViewController: UIViewController {
         return text
     }()
     
+    let timeInputText : UITextField = {
+        let text = UITextField(frame: CGRect(x: 30, y: 340, width: 300, height: 30))
+        text.layer.borderWidth = 1.0
+        text.layer.borderColor = UIColor.black.cgColor
+        text.textColor = .black
+        return text
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         addNavBarBtutton()
         view.addSubview(inputText)
+        view.addSubview(timeInputText)
     }
     
     func addNavBarBtutton(){
@@ -45,8 +54,10 @@ class AddAppointmentListViewController: UIViewController {
                 alert(message: "메모를 입력하세요")
                 return
         }
+        
+        let time :String = timeInputText.text!
 
-        let memo = AddressData(title: name)
+        let memo = AddressData(title: name, time: time)
         AddressData.dummyList.append(memo)
         
         delegate?.reload()

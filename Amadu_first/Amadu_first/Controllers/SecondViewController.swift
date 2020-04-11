@@ -25,7 +25,7 @@ class SecondViewController: UIViewController{
     func configureTableview() {
         view.addSubview(tableView)
         setTableViewDelegate()
-        tableView.rowHeight = 120
+        tableView.rowHeight = 100
         tableView.register(AddAppointmentCell.self, forCellReuseIdentifier: cellId)
         tableView.pin(to: view)
     }

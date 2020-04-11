@@ -11,6 +11,7 @@ import UIKit
 class AddAppointmentCell: UITableViewCell {
     
     var tempLabel = UILabel()
+    var timeLabel = UILabel()
     
     let timeImage : UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "clock.png"))
@@ -24,6 +25,7 @@ class AddAppointmentCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(tempLabel)
+        addSubview(timeLabel)
         addSubview(timeImage)
         
         configureLabel()
@@ -36,18 +38,19 @@ class AddAppointmentCell: UITableViewCell {
     
     func set2(data: AddressData){
         tempLabel.text = data.title
+        timeLabel.text = data.time
     }
     
     func configureLabel(){
         tempLabel.numberOfLines = 0
+        timeLabel.numberOfLines = 0
         tempLabel.adjustsFontSizeToFitWidth = true
+        timeLabel.adjustsFontSizeToFitWidth = true
     }
     
     
     func setLabelConstraints(){
         tempLabel.translatesAutoresizingMaskIntoConstraints = false
-//        tempLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-
         tempLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
         tempLabel.heightAnchor.constraint(equalToConstant: 48).isActive = true
         tempLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
@@ -57,6 +60,10 @@ class AddAppointmentCell: UITableViewCell {
         timeImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
         timeImage.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false
+        timeLabel.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
+        timeLabel.leadingAnchor.constraint(equalTo: timeImage.leadingAnchor, constant: 30).isActive = true
+        timeLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
 //        profileImage.translatesAutoresizingMaskIntoConstraints = false
 //        profileImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 //        profileImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
