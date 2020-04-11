@@ -46,7 +46,8 @@ class AddAppointmentCell: UITableViewCell {
     
     func setLabelConstraints(){
         tempLabel.translatesAutoresizingMaskIntoConstraints = false
-        tempLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+//        tempLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+
         tempLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
         tempLabel.heightAnchor.constraint(equalToConstant: 48).isActive = true
         tempLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
