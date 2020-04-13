@@ -18,5 +18,6 @@ class AddressData{
     }
     
     static var dummyList : [AddressData] = [
+        AddressData(title: "홍대 나의봄날에서 만나기", time: "PM 02:30")
     ]
 }
