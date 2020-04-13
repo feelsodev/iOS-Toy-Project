@@ -16,7 +16,7 @@ class AddAppointmentListViewController: UIViewController {
     
     var delegate : reloadTable?
     
-    let inputText : UITextField = {
+    let titleText : UITextField = {
         let text = UITextField(frame: CGRect(x: 30, y: 300, width: 300, height: 30))
         text.layer.borderWidth = 1.0
         text.layer.borderColor = UIColor.black.cgColor
@@ -24,7 +24,7 @@ class AddAppointmentListViewController: UIViewController {
         return text
     }()
     
-    let timeInputText : UITextField = {
+    let timeText : UITextField = {
         let text = UITextField(frame: CGRect(x: 30, y: 340, width: 300, height: 30))
         text.layer.borderWidth = 1.0
         text.layer.borderColor = UIColor.black.cgColor
@@ -32,12 +32,33 @@ class AddAppointmentListViewController: UIViewController {
         return text
     }()
     
+    let personnelText : UITextField = {
+        let text = UITextField(frame: CGRect(x: 30, y: 380, width: 300, height: 30))
+        text.layer.borderWidth = 1.0
+        text.layer.borderColor = UIColor.black.cgColor
+        text.textColor = .black
+        return text
+    }()
+
+    
+    let addressText : UITextField = {
+        let text = UITextField(frame: CGRect(x: 30, y: 420, width: 300, height: 30))
+        text.layer.borderWidth = 1.0
+        text.layer.borderColor = UIColor.black.cgColor
+        text.textColor = .black
+        return text
+    }()
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         addNavBarBtutton()
-        view.addSubview(inputText)
-        view.addSubview(timeInputText)
+        view.addSubview(titleText)
+        view.addSubview(timeText)
+        view.addSubview(personnelText)
+        view.addSubview(addressText)
     }
     
     func addNavBarBtutton(){
@@ -49,19 +70,20 @@ class AddAppointmentListViewController: UIViewController {
     }
 
     @objc func saveView(_ sender : UINavigationItem){
-        guard let name = inputText.text,
+        guard let name = titleText.text,
             name.count > 0 else{
                 alert(message: "메모를 입력하세요")
                 return
         }
         
-        let time :String = timeInputText.text!
+        let time :String = timeText.text!
+        let personnel :String = personnelText.text!
+        let address : String = addressText.text!
 
-        let memo = AddressData(title: name, time: time)
-        AddressData.dummyList.append(memo)
+        let data = AddressData(title: name, time: time, personnel: personnel, address: address)
+        AddressData.dummyList.append(data)
         
         delegate?.reload()
-        
         
         dismiss(animated: true, completion: nil)
     }

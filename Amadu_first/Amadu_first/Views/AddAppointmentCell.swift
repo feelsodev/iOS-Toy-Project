@@ -44,7 +44,7 @@ class AddAppointmentCell: UITableViewCell {
         addSubview(tempLabel)
         
         addSubview(timeLabel)
-        addSubview(personnalLabel)
+        addSubview(personnelLabel)
         addSubview(addressLabel)
         
         
@@ -63,6 +63,8 @@ class AddAppointmentCell: UITableViewCell {
     func set2(data: AddressData){
         tempLabel.text = data.title
         timeLabel.text = data.time
+        personnelLabel.text = data.personnel
+        addressLabel.text = data.address
     }
     
     func configureLabel(){
@@ -108,7 +110,7 @@ class AddAppointmentCell: UITableViewCell {
         
         mapPinImage.translatesAutoresizingMaskIntoConstraints = false
         mapPinImage.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
-        mapPinImage.leadingAnchor.constraint(equalTo: personnalLabel.trailingAnchor, constant: 20).isActive = true
+        mapPinImage.leadingAnchor.constraint(equalTo: personnelLabel.trailingAnchor, constant: 20).isActive = true
         mapPinImage.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
