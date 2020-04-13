@@ -11,13 +11,17 @@ import UIKit
 class AddressData{
     var title : String
     var time : String
+    var personnel : String
+    var address : String
     
-    init(title : String, time: String){
+    init(title : String, time: String, personnel : String, address : String){
         self.title = title
         self.time = time
+        self.personnel = personnel
+        self.address = address
     }
     
     static var dummyList : [AddressData] = [
-        AddressData(title: "홍대 나의봄날에서 만나기", time: "PM 02:30")
+        AddressData(title: "홍대 나의봄날에서 만나기", time: "PM 02:30",personnel: "8명", address: "잔다리로 332")
     ]
 }

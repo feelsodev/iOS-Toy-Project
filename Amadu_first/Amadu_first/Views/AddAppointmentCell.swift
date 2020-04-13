@@ -13,7 +13,7 @@ class AddAppointmentCell: UITableViewCell {
     var tempLabel = UILabel()
     
     var timeLabel = UILabel()
-    var personnalLabel = UILabel()
+    var personnelLabel = UILabel()
     var addressLabel = UILabel()
     
     let timeImage : UIImageView = {
@@ -68,12 +68,12 @@ class AddAppointmentCell: UITableViewCell {
     func configureLabel(){
         tempLabel.numberOfLines = 0
         timeLabel.numberOfLines = 0
-        personnalLabel.numberOfLines = 0
+        personnelLabel.numberOfLines = 0
         addressLabel.numberOfLines = 0
         
         tempLabel.adjustsFontSizeToFitWidth = true
         timeLabel.adjustsFontSizeToFitWidth = true
-        personnalLabel.adjustsFontSizeToFitWidth = true
+        personnelLabel.adjustsFontSizeToFitWidth = true
         addressLabel.adjustsFontSizeToFitWidth = true
         
     }
@@ -101,10 +101,10 @@ class AddAppointmentCell: UITableViewCell {
         personImage.leadingAnchor.constraint(equalTo: timeLabel.trailingAnchor, constant: 20).isActive = true
         personImage.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
-        personnalLabel.translatesAutoresizingMaskIntoConstraints = false
-        personnalLabel.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
-        personnalLabel.leadingAnchor.constraint(equalTo: personImage.leadingAnchor).isActive = true
-        personnalLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        personnelLabel.translatesAutoresizingMaskIntoConstraints = false
+        personnelLabel.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
+        personnelLabel.leadingAnchor.constraint(equalTo: personImage.leadingAnchor).isActive = true
+        personnelLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         mapPinImage.translatesAutoresizingMaskIntoConstraints = false
         mapPinImage.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
