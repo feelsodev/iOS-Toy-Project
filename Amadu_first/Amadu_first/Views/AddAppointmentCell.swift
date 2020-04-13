@@ -68,9 +68,16 @@ class AddAppointmentCell: UITableViewCell {
     func configureLabel(){
         tempLabel.numberOfLines = 0
         timeLabel.numberOfLines = 0
+        personnalLabel.numberOfLines = 0
+        addressLabel.numberOfLines = 0
+        
         tempLabel.adjustsFontSizeToFitWidth = true
         timeLabel.adjustsFontSizeToFitWidth = true
+        personnalLabel.adjustsFontSizeToFitWidth = true
+        addressLabel.adjustsFontSizeToFitWidth = true
+        
     }
+    
     
     
     func setLabelConstraints(){
