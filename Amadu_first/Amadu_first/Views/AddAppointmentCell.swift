@@ -91,12 +91,12 @@ class AddAppointmentCell: UITableViewCell {
         timeImage.translatesAutoresizingMaskIntoConstraints = false
         timeImage.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
         timeImage.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
-        timeImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        timeImage.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         timeLabel.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
         timeLabel.leadingAnchor.constraint(equalTo: timeImage.trailingAnchor).isActive = true
-        timeLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        timeLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         personImage.translatesAutoresizingMaskIntoConstraints = false
         personImage.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
@@ -105,7 +105,7 @@ class AddAppointmentCell: UITableViewCell {
         
         personnelLabel.translatesAutoresizingMaskIntoConstraints = false
         personnelLabel.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
-        personnelLabel.leadingAnchor.constraint(equalTo: personImage.leadingAnchor).isActive = true
+        personnelLabel.leadingAnchor.constraint(equalTo: personImage.trailingAnchor).isActive = true
         personnelLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         mapPinImage.translatesAutoresizingMaskIntoConstraints = false
@@ -115,7 +115,7 @@ class AddAppointmentCell: UITableViewCell {
         
         addressLabel.translatesAutoresizingMaskIntoConstraints = false
         addressLabel.topAnchor.constraint(equalTo: tempLabel.bottomAnchor).isActive = true
-        addressLabel.leadingAnchor.constraint(equalTo: mapPinImage.leadingAnchor).isActive = true
+        addressLabel.leadingAnchor.constraint(equalTo: mapPinImage.trailingAnchor).isActive = true
         addressLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
     
     }
