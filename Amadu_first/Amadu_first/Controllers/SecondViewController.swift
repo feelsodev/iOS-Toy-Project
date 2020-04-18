@@ -13,6 +13,8 @@ class SecondViewController: UIViewController{
     let cellId = "cellId2"
     var tableView = UITableView()
     
+    let dummy = [AddressData(title: "홍대 나의봄날에서 만나기", time: "PM 02:30",personnel: "8명", address: "잔다리로 332"), AddressData(title: "김밥천국", time: "PM 02:30",personnel: "8명", address: "은평구 연신내역")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white   //배경 화이트
@@ -59,13 +61,16 @@ extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AddressData.dummyList.count
+        if section == 0{
+            return AddressData.dummyList.count
+        }
+        return dummy.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! AddAppointmentCell
         
-        let addressData = AddressData.dummyList[indexPath.row]
+        let addressData = indexPath.section == 0 ? AddressData.dummyList[indexPath.row] : dummy[indexPath.row]
         cell.set2(data: addressData)
         
         print("cell reload")
