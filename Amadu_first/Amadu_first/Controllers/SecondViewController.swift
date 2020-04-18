@@ -47,6 +47,17 @@ class SecondViewController: UIViewController{
 
 extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Header"
+        label.backgroundColor = UIColor.lightGray
+        return  label
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AddressData.dummyList.count
     }
