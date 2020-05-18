@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		A524BE762472A8AD0023518C /* iOS_KakaoAddress.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A524BE742472A8AD0023518C /* iOS_KakaoAddress.xcdatamodeld */; };
 		A524BE782472A8AE0023518C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A524BE772472A8AE0023518C /* Assets.xcassets */; };
 		A524BE7B2472A8AE0023518C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A524BE792472A8AE0023518C /* LaunchScreen.storyboard */; };
+		A524BE832472AED90023518C /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524BE822472AED90023518C /* AddressData.swift */; };
+		A524BE852472AF2B0023518C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524BE842472AF2B0023518C /* SearchViewController.swift */; };
+		A55281C22472F9A500ADD4BB /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55281C12472F9A500ADD4BB /* AddressCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		A524BE772472A8AE0023518C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A524BE7A2472A8AE0023518C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A524BE7C2472A8AE0023518C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A524BE822472AED90023518C /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
+		A524BE842472AF2B0023518C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A55281C12472F9A500ADD4BB /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		B491FD582A989208CBEFCB07 /* Pods-iOS-KakaoAddress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-KakaoAddress.release.xcconfig"; path = "Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress.release.xcconfig"; sourceTree = "<group>"; };
 		F5F568A78F2BB71FDBA8530C /* Pods-iOS-KakaoAddress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-KakaoAddress.debug.xcconfig"; path = "Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +56,6 @@
 				F5F568A78F2BB71FDBA8530C /* Pods-iOS-KakaoAddress.debug.xcconfig */,
 				B491FD582A989208CBEFCB07 /* Pods-iOS-KakaoAddress.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +91,9 @@
 				A524BE6B2472A8AD0023518C /* AppDelegate.swift */,
 				A524BE6D2472A8AD0023518C /* SceneDelegate.swift */,
 				A524BE6F2472A8AD0023518C /* ViewController.swift */,
+				A524BE822472AED90023518C /* AddressData.swift */,
+				A524BE842472AF2B0023518C /* SearchViewController.swift */,
+				A55281C12472F9A500ADD4BB /* AddressCell.swift */,
 				A524BE712472A8AD0023518C /* Main.storyboard */,
 				A524BE772472A8AE0023518C /* Assets.xcassets */,
 				A524BE792472A8AE0023518C /* LaunchScreen.storyboard */,
@@ -210,6 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A524BE852472AF2B0023518C /* SearchViewController.swift in Sources */,
+				A55281C22472F9A500ADD4BB /* AddressCell.swift in Sources */,
+				A524BE832472AED90023518C /* AddressData.swift in Sources */,
 				A524BE762472A8AD0023518C /* iOS_KakaoAddress.xcdatamodeld in Sources */,
 				A524BE702472A8AD0023518C /* ViewController.swift in Sources */,
 				A524BE6C2472A8AD0023518C /* AppDelegate.swift in Sources */,
