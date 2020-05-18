@@ -19,6 +19,7 @@ class AddressCell : UITableViewCell{
         addSubview(jibunAddress)
         
         labelAutolayout()
+        labelSet()
     }
     
     required init?(coder: NSCoder) {
@@ -33,16 +34,21 @@ class AddressCell : UITableViewCell{
     func labelSet(){
         address.numberOfLines = 0
         jibunAddress.numberOfLines = 0
+        
+        address.adjustsFontSizeToFitWidth = true
+        jibunAddress.adjustsFontSizeToFitWidth = true
     }
     
     func labelAutolayout(){
         address.translatesAutoresizingMaskIntoConstraints = false
-        address.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        address.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        address.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
+        address.heightAnchor.constraint(equalToConstant: 48).isActive = true
+        address.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
         
         jibunAddress.translatesAutoresizingMaskIntoConstraints = false
         jibunAddress.topAnchor.constraint(equalTo: address.bottomAnchor).isActive = true
-        jibunAddress.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5).isActive = true
+        jibunAddress.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
+        jibunAddress.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
     }
     

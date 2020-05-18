@@ -8,34 +8,57 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
-//    let button = UIButton()
-    let button : UIButton = {
-        let button = UIButton()
-        button.addTarget(self, action: #selector(search), for: .touchUpInside)
-        return button
-    }()
+    let label = UILabel()
+    let tableview = UITableView()
+    var resultList: [Address] = [Address(address: "hi", jibunAddress: "hi"),
+    Address(address: "tq", jibunAddress: "tq")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        test()
+        view.addSubview(label)
+        
+        view.addSubview(tableview)
+        tableview.register(AddressCell.self, forCellReuseIdentifier: "cell")
+        tableview.tableFooterView = UIView()
         view.backgroundColor = .white
-        buttonAutolayout()
+        tableview.rowHeight = 90
+        setTableViewDelegate()
+        
+    }
+    
+    func setTableViewDelegate(){
+        tableview.delegate = self
+        tableview.dataSource = self
+        tableview.pin(to: view)
     }
 
-    func buttonAutolayout(){
-        view.addSubview(button)
-        button.setTitle("search", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-//        button.addTarget(self, action: #selector(search), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-    }
-
-    @objc func search(){
-        let searchVC = SearchViewController()
-        navigationController?.pushViewController(searchVC, animated: true)
+    func test(){
+        label.frame = CGRect(x: 0, y: 100, width: 200, height: 200)
+        label.text = "hdgfdfdfdfd"
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+//        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
+//        tableview.translatesAutoresizingMaskIntoConstraints = false
+//        tableview.topAnchor.constraint(equalTo: label.bottomAnchor).isActive = true
     }
 }
 
+extension ViewController : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! AddressCell
+        let address = resultList[indexPath.row]
+        cell.set(data: address)
+        print("reload")
+        return cell
+    }
+//
+    
+    
+}
