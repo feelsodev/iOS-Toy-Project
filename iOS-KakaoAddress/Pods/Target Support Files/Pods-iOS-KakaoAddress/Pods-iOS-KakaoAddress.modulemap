@@ -1,0 +1,6 @@
+framework module Pods_iOS_KakaoAddress {
+  umbrella header "Pods-iOS-KakaoAddress-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4098497C00FDC16DA54E28A2 /* Pods_iOS_KakaoAddress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A59A200DE029F9715A7BD05 /* Pods_iOS_KakaoAddress.framework */; };
 		A524BE6C2472A8AD0023518C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524BE6B2472A8AD0023518C /* AppDelegate.swift */; };
 		A524BE6E2472A8AD0023518C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524BE6D2472A8AD0023518C /* SceneDelegate.swift */; };
 		A524BE702472A8AD0023518C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A524BE6F2472A8AD0023518C /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A59A200DE029F9715A7BD05 /* Pods_iOS_KakaoAddress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_KakaoAddress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A524BE682472A8AD0023518C /* iOS-KakaoAddress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-KakaoAddress.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A524BE6B2472A8AD0023518C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A524BE6D2472A8AD0023518C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		A524BE772472A8AE0023518C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A524BE7A2472A8AE0023518C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A524BE7C2472A8AE0023518C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B491FD582A989208CBEFCB07 /* Pods-iOS-KakaoAddress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-KakaoAddress.release.xcconfig"; path = "Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress.release.xcconfig"; sourceTree = "<group>"; };
+		F5F568A78F2BB71FDBA8530C /* Pods-iOS-KakaoAddress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-KakaoAddress.debug.xcconfig"; path = "Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4098497C00FDC16DA54E28A2 /* Pods_iOS_KakaoAddress.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30B8A1037B1D183B345082AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5F568A78F2BB71FDBA8530C /* Pods-iOS-KakaoAddress.debug.xcconfig */,
+				B491FD582A989208CBEFCB07 /* Pods-iOS-KakaoAddress.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A45862835FFE845446028C1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A59A200DE029F9715A7BD05 /* Pods_iOS_KakaoAddress.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A524BE5F2472A8AD0023518C = {
 			isa = PBXGroup;
 			children = (
 				A524BE6A2472A8AD0023518C /* iOS-KakaoAddress */,
 				A524BE692472A8AD0023518C /* Products */,
+				30B8A1037B1D183B345082AF /* Pods */,
+				A45862835FFE845446028C1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A524BE7F2472A8AE0023518C /* Build configuration list for PBXNativeTarget "iOS-KakaoAddress" */;
 			buildPhases = (
+				70A1F79BB755A47582165389 /* [CP] Check Pods Manifest.lock */,
 				A524BE642472A8AD0023518C /* Sources */,
 				A524BE652472A8AD0023518C /* Frameworks */,
 				A524BE662472A8AD0023518C /* Resources */,
+				1734C5E3C59C9B4844C4487F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1734C5E3C59C9B4844C4487F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70A1F79BB755A47582165389 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-KakaoAddress-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A524BE642472A8AD0023518C /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		A524BE802472A8AE0023518C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5F568A78F2BB71FDBA8530C /* Pods-iOS-KakaoAddress.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +374,7 @@
 		};
 		A524BE812472A8AE0023518C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B491FD582A989208CBEFCB07 /* Pods-iOS-KakaoAddress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
