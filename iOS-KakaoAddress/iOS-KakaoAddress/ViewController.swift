@@ -11,7 +11,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
 class ViewController: UIViewController{
     let apiKey = "ec74a28d28177a706155cb8af1fb7ec8"
     
@@ -43,6 +42,7 @@ class ViewController: UIViewController{
     let tableOn : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
         return view
     }()
     
@@ -79,7 +79,6 @@ class ViewController: UIViewController{
         let parameters: [String: Any] = [
             "query": keyword
         ]
-
 
         AF.request("https://dapi.kakao.com/v2/local/search/keyword.json", method: .get, parameters: parameters, headers: headers)
             .responseJSON(completionHandler: { response in
