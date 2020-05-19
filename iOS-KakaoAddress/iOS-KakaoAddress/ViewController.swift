@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ViewController: UIViewController{
 
+    let apiKey = "ec74a28d28177a706155cb8af1fb7ec8"
+    
     let search : UITextField = {
         let text = UITextField()
         text.layer.borderWidth = 1.0
@@ -64,6 +68,23 @@ class ViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
 //        tableView.pin(to: tableOn)
+    }
+    
+    func searchAddress(keyword : String){
+        let headers: HTTPHeaders = [
+            "Authorization": "KakaoAK ec74a28d28177a706155cb8af1fb7ec8"
+        ]
+        
+        let parameters: [String: Any] = [
+            "query": keyword,
+        ]
+
+
+        AF.request("https://dapi.kakao.com/v2/local/search/address.json", method: .get, parameters: parameters, headers: headers)
+            .responseJSON { (response) in
+                <#code#>
+        }
+
     }
 
     func configAutolayout(){
