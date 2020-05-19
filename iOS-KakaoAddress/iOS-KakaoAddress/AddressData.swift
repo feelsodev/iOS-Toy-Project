@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct Address {
+struct Address: Codable {
     var address : String
     var jibunAddress : String
+    
+    init(address : String ,jibunAddress : String) {
+        self.address = address
+        self.jibunAddress = jibunAddress
+    }
 }

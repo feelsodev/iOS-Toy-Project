@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
+import SwiftyJSON
+
 
 class ViewController: UIViewController{
-
+    let apiKey = "ec74a28d28177a706155cb8af1fb7ec8"
+    
     let search : UITextField = {
         let text = UITextField()
         text.layer.borderWidth = 1.0
@@ -25,6 +30,7 @@ class ViewController: UIViewController{
         button.tintColor = .white
         button.backgroundColor = .darkGray
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(complete), for: .touchUpInside)
         return button
     }()
     
@@ -40,8 +46,7 @@ class ViewController: UIViewController{
         return view
     }()
     
-    var resultList: [Address] = [Address(address: "hi", jibunAddress: "hi"),
-    Address(address: "tq", jibunAddress: "tq")]
+    var resultList: [Address] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,18 +57,50 @@ class ViewController: UIViewController{
         view.addSubview(tableOn)
         tableOn.addSubview(tableView)
         
+        
         tableView.register(AddressCell.self, forCellReuseIdentifier: "cell")
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 90
         setTableViewDelegate()
         configAutolayout()
-        
     }
     
     func setTableViewDelegate(){
         tableView.delegate = self
         tableView.dataSource = self
 //        tableView.pin(to: tableOn)
+    }
+    
+    func searchAddress(keyword : String){
+        let headers: HTTPHeaders = [
+            "Authorization": "KakaoAK ec74a28d28177a706155cb8af1fb7ec8"
+        ]
+        
+        let parameters: [String: Any] = [
+            "query": keyword
+        ]
+
+
+        AF.request("https://dapi.kakao.com/v2/local/search/keyword.json", method: .get, parameters: parameters, headers: headers)
+            .responseJSON(completionHandler: { response in
+                switch response.result{
+                case .success(let value):
+                    self.resultList.removeAll()
+                    if let addressList = JSON(value)["documents"].array{
+                        for item in addressList{
+                            print(item["address_name"])
+                            print(item["road_address_name"])
+
+                            self.resultList.append(Address(address: item["address_name"].string!, jibunAddress: item["road_address_name"].string!))
+                        }
+                    }
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    print(error)
+                }
+                
+            })
+
     }
 
     func configAutolayout(){
@@ -88,6 +125,11 @@ class ViewController: UIViewController{
         tableView.trailingAnchor.constraint(equalTo: tableOn.trailingAnchor).isActive = true
     }
     
+    
+    @objc func complete(){
+        let text = search.text!
+        searchAddress(keyword: text)
+    }
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
