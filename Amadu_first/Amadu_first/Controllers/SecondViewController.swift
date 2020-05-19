@@ -53,7 +53,7 @@ extension SecondViewController : UITableViewDelegate, UITableViewDataSource{
         let label = UILabel()
         label.text = "Header"
         label.backgroundColor = UIColor.lightGray
-        return  label
+        return label
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
