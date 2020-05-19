@@ -81,17 +81,17 @@ class ViewController: UIViewController{
         ]
 
 
-        AF.request("https://dapi.kakao.com/v2/local/search/address.json", method: .get, parameters: parameters, headers: headers)
+        AF.request("https://dapi.kakao.com/v2/local/search/keyword.json", method: .get, parameters: parameters, headers: headers)
             .responseJSON(completionHandler: { response in
                 switch response.result{
                 case .success(let value):
-//                    print(response.result)
+                    self.resultList.removeAll()
                     if let addressList = JSON(value)["documents"].array{
                         for item in addressList{
-                            print(item["address"]["address_name"])
-                            print(item["road_address"]["address_name"])
-                            print(type(of: item["address"]["address_name"].string!))
-                            self.resultList.append(Address(address: item["address"]["address_name"].string!, jibunAddress: item["road_address"]["address_name"].string!))
+                            print(item["address_name"])
+                            print(item["road_address_name"])
+
+                            self.resultList.append(Address(address: item["address_name"].string!, jibunAddress: item["road_address_name"].string!))
                         }
                     }
                     self.tableView.reloadData()
@@ -128,7 +128,7 @@ class ViewController: UIViewController{
     
     @objc func complete(){
         let text = search.text!
-        searchAddress(keyword: text ?? "")
+        searchAddress(keyword: text)
     }
 }
 
