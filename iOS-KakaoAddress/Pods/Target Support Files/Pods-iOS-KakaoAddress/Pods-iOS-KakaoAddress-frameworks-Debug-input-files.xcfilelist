@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-iOS-KakaoAddress/Pods-iOS-KakaoAddress-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${PODS_ROOT}/NMapsMap/framework/NMapsMap.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/Then/Then.framework
