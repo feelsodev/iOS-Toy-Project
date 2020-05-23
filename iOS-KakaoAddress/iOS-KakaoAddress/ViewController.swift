@@ -6,45 +6,39 @@
 //  Copyright © 2020 once. All rights reserved.
 //
 
-import UIKit
-import Foundation
 import Alamofire
+import Foundation
+import UIKit
 import SwiftyJSON
+import Then
+import SnapKit
 
 class ViewController: UIViewController{
     let apiKey = "ec74a28d28177a706155cb8af1fb7ec8"
     
-    let search : UITextField = {
-        let text = UITextField()
-        text.layer.borderWidth = 1.0
-        text.layer.borderColor = UIColor.black.cgColor
-        text.textColor = .black
-        text.translatesAutoresizingMaskIntoConstraints = false
-        return text
-    }()
+    let search = UITextField().then{
+        $0.layer.borderWidth = 1.0
+        $0.layer.borderColor = UIColor.black.cgColor
+        $0.textColor = .black
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+        
+    let button = UIButton().then{
+        $0.setTitle("검색", for: .normal)
+        $0.tintColor = .white
+        $0.backgroundColor = .darkGray
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.addTarget(self, action: #selector(complete), for: .touchUpInside)
+    }
     
-    let button : UIButton = {
-        let button = UIButton()
-        button.setTitle("검색", for: .normal)
-        button.tintColor = .white
-        button.backgroundColor = .darkGray
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(complete), for: .touchUpInside)
-        return button
-    }()
+    let tableView = UITableView().then{
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
     
-    let tableView : UITableView = {
-        let table = UITableView()
-        table.translatesAutoresizingMaskIntoConstraints = false
-        return table
-    }()
-    
-    let tableOn : UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
-        return view
-    }()
+    let tableOn = UIView().then{
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.backgroundColor = .white
+    }
     
     var resultList: [Address] = []
     
