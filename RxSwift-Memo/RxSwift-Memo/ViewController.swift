@@ -23,8 +23,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        validID?.isHidden = true
+        bindUI()
     }
+    
+    
+    func bindUI(){
+        //ID Check
+        idText.rx.text.orEmpty
+            .map(idValid)
+            .subscribe(onNext: { b in
+                self.validID?.isHidden = b
+            })
+            .disposed(by: disposeBag)
+        
+        //PW Check
+        pwText.rx.text.orEmpty
+            .map(pwValid)
+            .subscribe(onNext: { b in
+                self.validPW?.isHidden = b
+            })
+            .disposed(by: disposeBag)
+    }
+    
     
     @IBAction func exJust1(){
         Observable.just("hello")
@@ -33,6 +53,16 @@ class ViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
+    
+    
+    func idValid(_ id: String) -> Bool{
+        return id.contains("@") && id.contains(".")
+    }
+    
+    func pwValid(_ pw: String) -> Bool{
+        return pw.count > 5
+    }
+    
 }
 
 
