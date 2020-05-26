@@ -8,14 +8,22 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    @IBOutlet weak var idText: UITextField!
+    @IBOutlet weak var pwText: UITextField!
+    @IBOutlet weak var validID: UIView?
+    @IBOutlet weak var validPW: UIView!
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        validID?.isHidden = true
     }
     
     @IBAction func exJust1(){
