@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var idText: UITextField!
     @IBOutlet weak var pwText: UITextField!
-    @IBOutlet weak var validID: UIView?
+    @IBOutlet weak var validID: UIView!
     @IBOutlet weak var validPW: UIView!
+    
+    @IBOutlet weak var loginBtn: UIButton!
 
     
     
@@ -27,7 +29,16 @@ class ViewController: UIViewController {
     }
     
     
+    
     func bindUI(){
+        
+//        let idInput: Observable<String> = idText.rx.text.orEmpty.asObservable()
+//        let idValid = idInput.map(idValid)
+//
+//        let pwInput: Observable<String> = pwText.rx.text.orEmpty.asObservable()
+//        let pwValid = pwInput.map(pwValid)
+//
+//
         //ID Check
         idText.rx.text.orEmpty
             .map(idValid)
@@ -43,6 +54,16 @@ class ViewController: UIViewController {
                 self.validPW?.isHidden = b
             })
             .disposed(by: disposeBag)
+        
+        Observable.combineLatest(
+            idText.rx.text.orEmpty.map(idValid),
+            pwText.rx.text.orEmpty.map(pwValid),
+            resultSelector: { s1, s2 in s1 && s2 }
+        )
+            .subscribe(onNext: {b in
+                self.loginBtn.isEnabled = b
+            })
+            .disposed(by: disposeBag)
     }
     
     
@@ -55,11 +76,11 @@ class ViewController: UIViewController {
     }
     
     
-    func idValid(_ id: String) -> Bool{
+    private func idValid(_ id: String) -> Bool{
         return id.contains("@") && id.contains(".")
     }
     
-    func pwValid(_ pw: String) -> Bool{
+    private func pwValid(_ pw: String) -> Bool{
         return pw.count > 5
     }
     
