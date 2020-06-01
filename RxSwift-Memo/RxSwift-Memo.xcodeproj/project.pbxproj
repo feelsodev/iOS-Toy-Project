@@ -16,6 +16,11 @@
 		A547029324854C690091CA55 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547029224854C690091CA55 /* Memo.swift */; };
 		A5470296248576B90091CA55 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5470295248576B90091CA55 /* MemoStorageType.swift */; };
 		A547029A248577D20091CA55 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5470299248577D20091CA55 /* MemoryStorage.swift */; };
+		A547029C248588750091CA55 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547029B248588750091CA55 /* MemoDetailViewController.swift */; };
+		A547029E248588A40091CA55 /* MemoComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547029D248588A40091CA55 /* MemoComposeViewController.swift */; };
+		A54702A0248588FD0091CA55 /* MemoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547029F248588FD0091CA55 /* MemoDetailViewModel.swift */; };
+		A54702A2248589260091CA55 /* MemoComposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54702A1248589260091CA55 /* MemoComposeViewModel.swift */; };
+		A54702A42485895D0091CA55 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54702A32485895D0091CA55 /* ViewModelBindableType.swift */; };
 		A585F8432482C11500A60530 /* MemoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585F8422482C11500A60530 /* MemoListViewModel.swift */; };
 		A585F8472482C19100A60530 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585F8462482C19100A60530 /* MemoListViewController.swift */; };
 		E3520F37B3B03B5FF966F4B7 /* Pods_RxSwift_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22EC5E82B644ACB307B7B7D /* Pods_RxSwift_Memo.framework */; };
@@ -34,6 +39,11 @@
 		A547029224854C690091CA55 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		A5470295248576B90091CA55 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
 		A5470299248577D20091CA55 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		A547029B248588750091CA55 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		A547029D248588A40091CA55 /* MemoComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewController.swift; sourceTree = "<group>"; };
+		A547029F248588FD0091CA55 /* MemoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewModel.swift; sourceTree = "<group>"; };
+		A54702A1248589260091CA55 /* MemoComposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewModel.swift; sourceTree = "<group>"; };
+		A54702A32485895D0091CA55 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
 		A585F8422482C11500A60530 /* MemoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewModel.swift; sourceTree = "<group>"; };
 		A585F8462482C19100A60530 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		DF3C68BD3A12BE11D0DC25BD /* Pods-RxSwift-Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Memo.release.xcconfig"; path = "Target Support Files/Pods-RxSwift-Memo/Pods-RxSwift-Memo.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +106,6 @@
 				A585F8402482C0D400A60530 /* ViewModel */,
 				A501768C246EAFEE009FC64A /* AppDelegate.swift */,
 				A501768E246EAFEE009FC64A /* SceneDelegate.swift */,
-				A5017692246EAFEF009FC64A /* Main.storyboard */,
 				A5017698246EAFF0009FC64A /* Assets.xcassets */,
 				A501769A246EAFF0009FC64A /* LaunchScreen.storyboard */,
 				A501769D246EAFF0009FC64A /* Info.plist */,
@@ -142,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				A585F8422482C11500A60530 /* MemoListViewModel.swift */,
+				A547029F248588FD0091CA55 /* MemoDetailViewModel.swift */,
+				A54702A1248589260091CA55 /* MemoComposeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,7 +160,11 @@
 		A585F8412482C0E900A60530 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A5017692246EAFEF009FC64A /* Main.storyboard */,
 				A585F8462482C19100A60530 /* MemoListViewController.swift */,
+				A547029B248588750091CA55 /* MemoDetailViewController.swift */,
+				A547029D248588A40091CA55 /* MemoComposeViewController.swift */,
+				A54702A32485895D0091CA55 /* ViewModelBindableType.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -270,13 +285,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A585F8432482C11500A60530 /* MemoListViewModel.swift in Sources */,
+				A54702A2248589260091CA55 /* MemoComposeViewModel.swift in Sources */,
+				A547029C248588750091CA55 /* MemoDetailViewController.swift in Sources */,
+				A54702A42485895D0091CA55 /* ViewModelBindableType.swift in Sources */,
 				A5470296248576B90091CA55 /* MemoStorageType.swift in Sources */,
 				A585F8472482C19100A60530 /* MemoListViewController.swift in Sources */,
 				A5017697246EAFEF009FC64A /* RxSwift_Memo.xcdatamodeld in Sources */,
 				A547029A248577D20091CA55 /* MemoryStorage.swift in Sources */,
 				A547029324854C690091CA55 /* Memo.swift in Sources */,
+				A54702A0248588FD0091CA55 /* MemoDetailViewModel.swift in Sources */,
 				A501768D246EAFEE009FC64A /* AppDelegate.swift in Sources */,
 				A501768F246EAFEE009FC64A /* SceneDelegate.swift in Sources */,
+				A547029E248588A40091CA55 /* MemoComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
