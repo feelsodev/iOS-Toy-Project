@@ -11,7 +11,6 @@ import UIKit
 class AddAppointmentCell: UITableViewCell {
     
     var tempLabel = UILabel()
-    
     var timeLabel = UILabel()
     var personnelLabel = UILabel()
     var addressLabel = UILabel()
