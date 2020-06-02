@@ -41,7 +41,7 @@
         <!--새 메모-->
         <scene sceneID="7X1-Oe-ooA">
             <objects>
-                <viewController id="2VC-An-npE" customClass="MemoComposeViewController" customModule="RxSwift_Memo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComposeNav" id="2VC-An-npE" customClass="MemoComposeViewController" customModule="RxSwift_Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QOW-Ih-Lr0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
