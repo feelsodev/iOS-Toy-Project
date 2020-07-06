@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_testVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_testVersionString[];
+FOUNDATION_EXPORT double NSObject_RxVersionNumber;
+FOUNDATION_EXPORT const unsigned char NSObject_RxVersionString[];
 

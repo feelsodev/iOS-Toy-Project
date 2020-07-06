@@ -20,13 +20,10 @@ class FirstViewController: UIViewController {
     btn.backgroundColor = UIColor.brown
 
     btn.rx.tap
-      .flatMap(selectedColor)
-      .observeOn(MainScheduler.instance)
+        .flatMap(selectedColor)
+        .observeOn(MainScheduler.instance)
         .bind(to: view.rx.backgroundColor)
-//      .subscribe(onNext: { [weak self] (color) in
-//        self?.view.backgroundColor = color
-//      })
-    .disposed(by: disposeBag)
+        .disposed(by: disposeBag)
   }
 
   func selectedColor() -> Observable<UIColor> {

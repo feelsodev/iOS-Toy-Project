@@ -80,7 +80,7 @@ class AddAppointmentListViewController: UIViewController {
         let personnel :String = personnelText.text!
         let address : String = addressText.text!
 
-        let data = AddressData(expand: false, title: name, time: time, personnel: personnel, address: address)
+        let data = AddressData(title: name, time: time, personnel: personnel, address: address)
         AddressData.dummyList.append(data)
         
         delegate?.reload()

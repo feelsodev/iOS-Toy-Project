@@ -13,11 +13,12 @@ import RxCocoa
 class SecondViewController: UIViewController {
   let disposeBag = DisposeBag()
   
-  private let selectedColorSubject = PublishSubject<UIColor>()
-  var selectedColor: Observable<UIColor> {
-    return selectedColorSubject.asObservable()
-  }
-  
+    let selectedColorSubject = PublishSubject<UIColor>()
+    var selectedColor: Observable<UIColor> {
+        return selectedColorSubject.asObservable()
+    }
+//    lazy var selectedColor: Observable<UIColor> = selectedColorSubject.asObservable()
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor.gray
