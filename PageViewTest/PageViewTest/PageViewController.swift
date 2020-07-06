@@ -11,6 +11,7 @@ import UIKit
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     let VCArr: [UIViewController] = [FirstViewController(), SecondViewController(), ThirdViewController()]
+    var pageControl = UIPageControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         if let firstVC = VCArr.first{
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
+        configurePageControl()
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -35,5 +37,23 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let nextIndex = index + 1
 
         return VCArr[nextIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = VCArr.index(of: pageContentViewController)!
+//        self.pageControl.currentPage = viewControllerList.index(of: pageContentViewController)!
+    }
+    
+    func configurePageControl() {
+        self.pageControl.numberOfPages = VCArr.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = UIColor.white
+        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        self.view.addSubview(pageControl)
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
