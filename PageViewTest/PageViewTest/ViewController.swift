@@ -22,26 +22,31 @@ class ViewController: UIViewController {
     }
 
     func attribute() {
-        firstView.backgroundColor = .red
-        secondView.backgroundColor = .gray
+        view.backgroundColor = .blue
+        
     }
     
     func layout() {
-        view.addSubview(firstView)
-        firstView.translatesAutoresizingMaskIntoConstraints = false
-        firstView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        firstView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        firstView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        firstView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
+//        view.addSubview(firstView)
+//        firstView.translatesAutoresizingMaskIntoConstraints = false
+//        firstView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        firstView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        firstView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        firstView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
+//
+//        view.addSubview(secondView)
+//        secondView.translatesAutoresizingMaskIntoConstraints = false
+//        secondView.topAnchor.constraint(equalTo: firstView.bottomAnchor).isActive = true
+//        secondView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//        secondView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        secondView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        view.addSubview(pageView.view)
+        pageView.view.translatesAutoresizingMaskIntoConstraints = false
+        pageView.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        pageView.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        pageView.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        pageView.view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8).isActive = true
         
-        view.addSubview(secondView)
-        secondView.translatesAutoresizingMaskIntoConstraints = false
-        secondView.topAnchor.constraint(equalTo: firstView.bottomAnchor).isActive = true
-        secondView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        secondView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        secondView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        
-        secondView.addSubview(<#T##view: UIView##UIView#>)
     }
 }
 

@@ -22,11 +22,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
         }
     }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-//    }
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = VCArr.firstIndex(of: viewController), index > 0 else { return nil }
         let previousIndex = index - 1
