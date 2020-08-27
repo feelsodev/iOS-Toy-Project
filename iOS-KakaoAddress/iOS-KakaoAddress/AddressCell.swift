@@ -13,7 +13,6 @@ class AddressCell : UITableViewCell{
     let address = UILabel()
     let jibunAddress = UILabel()
     
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(address)
@@ -50,7 +49,6 @@ class AddressCell : UITableViewCell{
         jibunAddress.topAnchor.constraint(equalTo: address.bottomAnchor).isActive = true
         jibunAddress.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 12).isActive = true
         jibunAddress.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        
     }
     
 }
