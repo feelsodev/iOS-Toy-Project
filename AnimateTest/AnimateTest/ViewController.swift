@@ -52,7 +52,7 @@ class ViewController: UIViewController {
             
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 
-                self.titleLabel.alpha = 0
+//                self.titleLabel.alpha = 0
                 self.titleLabel.transform = self.titleLabel.transform.translatedBy(x: 0, y: -150)
             })
         }

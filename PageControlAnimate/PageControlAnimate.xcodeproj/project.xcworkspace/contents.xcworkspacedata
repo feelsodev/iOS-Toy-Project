@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PageViewTest.xcodeproj">
+      location = "self:PageControlAnimate.xcodeproj">
    </FileRef>
 </Workspace>
