@@ -28,7 +28,7 @@ class AddressCell : UITableViewCell{
     
     func set(data : Address){
         address.text = data.address
-        jibunAddress.text = data.jibunAddress
+        jibunAddress.text = data.roadAddress
     }
     
     func labelSet(){

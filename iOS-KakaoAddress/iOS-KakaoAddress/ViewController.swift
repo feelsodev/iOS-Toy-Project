@@ -72,46 +72,33 @@ class ViewController: UIViewController{
             "query": keyword
         ]
 
-//        AF.request("https://dapi.kakao.com/v2/local/search/keyword.json", method: .get, parameters: parameters, headers: headers)
-//        .responseJSON(completionHandler: { response in
-//            switch response.result{
-//            case .success(let value):
-//                let decoder = JSONDecoder()
-//                if let data = value, let myAddress = try decoder.decode(Address.self, from: data){
-//                    print(myAddress.)
-//                }
-//                self.tableView.reloadData()
-//            case .failure(let error):
-//                print(error)
-//            }
-//
-//        })
         AF.request("https://dapi.kakao.com/v2/local/search/keyword.json", method: .get, parameters: parameters, headers: headers)
-            .responseJSON(completionHandler: { response in
-                switch response.result{
-                case .success(let value):
-                    let decoder = JSONDecoder()
-//                    print(JSON(value)["documents"][0]["road_address_name"])
-                    let jsonString = JSON(value)["documents"][0]["road_address_name"]
-                    if let data = jsonString, let myAddress = try decoder.decode(Address.self, from: data) {
-                        print(myAddress)
-                    }
-//                    self.resultList.removeAll
-//                    if let addressList = JSON(value)["documents"]{
-//                        print(addressList)
-////                        for item in addressList{
-////                            print(item["address_name"])
-////                            print(item["road_address_name"])
-////
-////                            self.resultList.append(Address(address: item["address_name"].string!, jibunAddress: item["road_address_name"].string!))
-////                        }
-//                    }
-                    self.tableView.reloadData()
-                case .failure(let error):
-                    print(error)
-                }
+        .responseJSON { response in
+            switch response.result{
+            case .success(let value):
+                print(JSON(value))
 
-            })
+
+//                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+
+        }
+//        AF.request("https://dapi.kakao.com/v2/local/search/keyword.json", method: .get, parameters: parameters, headers: headers)
+//            .responseJSON(completionHandler: { response in
+//                switch response.result{
+//                case .success(let value):
+//                    let decoder = JSONDecoder()
+//                    let jsonString = JSON(value)["documents"][0]["road_address_name"]
+//                    if let data = jsonString, let myAddress = try decoder.decode(Address.self, from: data) {
+//                        print(myAddress)
+//                    }
+//                case .failure(let error):
+//                    print(error)
+//                }
+//
+//            })
     }
 
     func configAutolayout(){

@@ -9,11 +9,30 @@
 import Foundation
 
 struct Address: Codable {
+    var url: String?
+    var distance: String?
+    var roadAddress : String
     var address : String
-    var jibunAddress : String
+    var phone: String?
+    var x: String
+    var y: String
+    var place_name: String?
+    var id: String?
+    var category_name: String?
+    var category_group_code: String?
+    var category_group_name: String?
     
-    init(address : String ,jibunAddress : String) {
-        self.address = address
-        self.jibunAddress = jibunAddress
+    enum CodingKeys: String, CodingKey {
+        case url = "place_url"
+        case distance
+        case roadAddress = "road_address_name"
+        case address = "address_name"
+        case phone
+        case x, y
+        case place_name
+        case id
+        case category_name
+        case category_group_name
+        case category_group_code
     }
 }
