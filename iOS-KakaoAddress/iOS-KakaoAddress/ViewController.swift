@@ -63,7 +63,7 @@ class ViewController: UIViewController{
         tableView.dataSource = self
     }
     
-    func searchAddress(keyword : String){
+    func searchAddress(keyword : String, completion: @escaping (Result<[Address], Error>) -> Void){
         let headers: HTTPHeaders = [
             "Authorization": "KakaoAK ec74a28d28177a706155cb8af1fb7ec8"
         ]
@@ -71,15 +71,19 @@ class ViewController: UIViewController{
         let parameters: [String: Any] = [
             "query": keyword
         ]
-
         AF.request("https://dapi.kakao.com/v2/local/search/keyword.json", method: .get, parameters: parameters, headers: headers)
         .responseJSON { response in
             switch response.result{
             case .success(let value):
-                print(JSON(value))
-
-
-//                self.tableView.reloadData()
+                let data = "\(JSON(value)["documents"])".data(using: .utf8)
+                do {
+                    if let data = data, let model = try? JSONDecoder().decode([Address].self, from: data) {
+                        completion(.success(model))
+                    }
+                } catch {
+                    completion(.failure(error))
+                    print("error: \(error)")
+                }
             case .failure(let error):
                 print(error)
             }
@@ -126,7 +130,15 @@ class ViewController: UIViewController{
     
     @objc func complete(){
         let text = search.text!
-        searchAddress(keyword: text)
+        searchAddress(keyword: text) { (result) in
+            switch result {
+            case .success(let value):
+                self.resultList = value
+                self.tableView.reloadData()
+            case .failure(let err):
+                print(err)
+            }
+        }
     }
 }
 
